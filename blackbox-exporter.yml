@@ -1,0 +1,11 @@
+kind: Route
+apiVersion: v1
+metadata:
+  name: blackbox-exporter
+spec:
+  host: blackbox-exporter.vagrant.f8
+  to:
+    kind: Service
+    name: blackbox-exporter
+newGroup: true
+endGroup: false
