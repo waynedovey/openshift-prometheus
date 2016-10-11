@@ -53,7 +53,7 @@ spec:
             - '-storage.local.path=/prometheus'
             - '-web.console.libraries=/etc/prometheus/console_libraries'
             - '-web.console.templates=/etc/prometheus/consoles'
-          image: 'prom/prometheus:v1.0.1'
+          image: 'prom/prometheus:v1.2.1'
           livenessProbe:
             httpGet:
               port: http
