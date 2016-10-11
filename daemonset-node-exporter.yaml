@@ -1,0 +1,56 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    group: io.fabric8.devops.apps
+    project: prometheus-node-exporter
+    provider: fabric8
+    version: 2.2.265
+  name: node-exporter
+spec:
+  template:
+    metadata:
+      labels:
+        group: io.fabric8.devops.apps
+        project: prometheus-node-exporter
+        provider: fabric8
+        version: 2.2.265
+      name: node-exporter
+    spec:
+      containers:
+        - args:
+            - '-collector.procfs'
+            - /host/proc
+            - '-collector.sysfs'
+            - /host/proc
+            - '-collector.filesystem.ignored-mount-points'
+            - ^/(sys|proc|dev|host|etc)($|/)
+          image: prom/node-exporter
+          name: node-exporter
+          ports:
+            - containerPort: 9100
+              name: scrape
+          volumeMounts:
+            - mountPath: /host/proc
+              name: host-proc
+              readOnly: true
+            - mountPath: /host/sys
+              name: host-sys
+              readOnly: true
+            - mountPath: /rootfs
+              name: host-root
+              readOnly: true
+      hostNetwork: true
+      serviceAccountName: node-exporter
+      volumes:
+        - hostPath:
+            path: /proc
+          name: host-proc
+        - hostPath:
+            path: /sys
+          name: host-sys
+        - hostPath:
+            path: /
+          name: host-root
+endGroup: true
+newGroup: true
