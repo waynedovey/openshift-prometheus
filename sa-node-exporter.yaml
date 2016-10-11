@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    group: io.fabric8.devops.apps
+    project: prometheus-node-exporter
+    provider: fabric8
+    version: 2.2.265
+  name: node-exporter
+endGroup: true
+newGroup: false
