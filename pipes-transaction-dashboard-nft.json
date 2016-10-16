@@ -1,0 +1,478 @@
+{
+"dashboard": {
+  "id": null,
+  "title": "Pipes Transaction",
+  "originalTitle": "Pipes Transaction",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 1,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum( rate(pipes_request_latency_sum[5m]) / rate(pipes_request_latency_count[5m]) ) by (system)",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Latency By Downstream System",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": 3,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 2,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum( rate(pipes_request_latency_sum[5m]) / rate(pipes_request_latency_count[5m]) ) by (action)  ",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Latency by Downstream Action",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Pipes Latency"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 3,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(rate(pipes_remote_errors[5m])) by (system)",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Errors by Downstream System",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 4,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(rate(pipes_remote_errors[5m])) by (action)",
+              "intervalFactor": 2,
+              "refId": "A"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Errors by Downstream Action",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Pipes Errors"
+    }
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": [
+      {
+        "allFormat": "glob",
+        "current": {
+          "tags": [],
+          "text": "All",
+          "value": "{cards.fetchAccounts,cash.fetchAccounts,onlineCustomer.retrieveNickname,windcharger.retrieve}"
+        },
+        "datasource": null,
+        "includeAll": true,
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "errors_by_action",
+        "options": [
+          {
+            "selected": true,
+            "text": "All",
+            "value": "{cards.fetchAccounts,cash.fetchAccounts,onlineCustomer.retrieveNickname,windcharger.retrieve}"
+          },
+          {
+            "selected": false,
+            "text": "cards.fetchAccounts",
+            "value": "cards.fetchAccounts"
+          },
+          {
+            "selected": false,
+            "text": "cash.fetchAccounts",
+            "value": "cash.fetchAccounts"
+          },
+          {
+            "selected": false,
+            "text": "onlineCustomer.retrieveNickname",
+            "value": "onlineCustomer.retrieveNickname"
+          },
+          {
+            "selected": false,
+            "text": "windcharger.retrieve",
+            "value": "windcharger.retrieve"
+          }
+        ],
+        "query": "label_values(pipes_remote_errors, action)",
+        "refresh_on_load": false,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "allFormat": "glob",
+        "current": {
+          "tags": [],
+          "text": "pipes_remote_errors{action=\"cash.fetchAccounts\",app=\"pipes-transaction\",http_response=\"500\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"CSH\"}",
+          "value": "pipes_remote_errors{action=\"cash.fetchAccounts\",app=\"pipes-transaction\",http_response=\"500\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"CSH\"}"
+        },
+        "datasource": null,
+        "includeAll": false,
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "pipeserrors",
+        "options": [
+          {
+            "selected": false,
+            "text": "pipes_remote_errors{action=\"cards.fetchAccounts\",app=\"pipes-transaction\",http_response=\"500\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"CRD\"}",
+            "value": "pipes_remote_errors{action=\"cards.fetchAccounts\",app=\"pipes-transaction\",http_response=\"500\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"CRD\"}"
+          },
+          {
+            "selected": true,
+            "text": "pipes_remote_errors{action=\"cash.fetchAccounts\",app=\"pipes-transaction\",http_response=\"500\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"CSH\"}",
+            "value": "pipes_remote_errors{action=\"cash.fetchAccounts\",app=\"pipes-transaction\",http_response=\"500\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"CSH\"}"
+          },
+          {
+            "selected": false,
+            "text": "pipes_remote_errors{action=\"onlineCustomer.retrieveNickname\",app=\"pipes-transaction\",http_response=\"503\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"CUS\"}",
+            "value": "pipes_remote_errors{action=\"onlineCustomer.retrieveNickname\",app=\"pipes-transaction\",http_response=\"503\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"CUS\"}"
+          },
+          {
+            "selected": false,
+            "text": "pipes_remote_errors{action=\"windcharger.retrieve\",app=\"pipes-transaction\",http_response=\"500\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"WCH\"}",
+            "value": "pipes_remote_errors{action=\"windcharger.retrieve\",app=\"pipes-transaction\",http_response=\"500\",job=\"kubernetes-service-endpoints\",kubernetes_name=\"pipes-transaction\",kubernetes_namespace=\"nft\",kubernetes_role=\"endpoint\",system=\"WCH\"}"
+          }
+        ],
+        "query": "pipes_remote_errors{action=~\".+\"}",
+        "refresh_on_load": false,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "allFormat": "glob",
+        "auto": false,
+        "auto_count": 3,
+        "current": {
+          "tags": [],
+          "text": "10m",
+          "value": "10m"
+        },
+        "datasource": null,
+        "includeAll": false,
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "intervaltest",
+        "options": [
+          {
+            "selected": false,
+            "text": "1m",
+            "value": "1m"
+          },
+          {
+            "selected": true,
+            "text": "10m",
+            "value": "10m"
+          },
+          {
+            "selected": false,
+            "text": "30m",
+            "value": "30m"
+          },
+          {
+            "selected": false,
+            "text": "1h",
+            "value": "1h"
+          },
+          {
+            "selected": false,
+            "text": "6h",
+            "value": "6h"
+          },
+          {
+            "selected": false,
+            "text": "12h",
+            "value": "12h"
+          },
+          {
+            "selected": false,
+            "text": "1d",
+            "value": "1d"
+          },
+          {
+            "selected": false,
+            "text": "7d",
+            "value": "7d"
+          },
+          {
+            "selected": false,
+            "text": "14d",
+            "value": "14d"
+          },
+          {
+            "selected": false,
+            "text": "30d",
+            "value": "30d"
+          }
+        ],
+        "query": "1m,10m,30m,1h,6h,12h,1d,7d,14d,30d",
+        "refresh_on_load": false,
+        "type": "interval"
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "schemaVersion": 7,
+  "version": 24,
+  "links": []
+ },
+ "overwrite": false
+}
