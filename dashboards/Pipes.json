@@ -1,0 +1,484 @@
+{
+  "id": 3,
+  "title": "Pipes",
+  "originalTitle": "Pipes",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 3,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(rate(pipes_remote_errors{kubernetes_namespace=\"$namespace\",system=~\"$source_system\"}[5m])) by (system)",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 21
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Errors by Downstream System",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 4,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(rate(pipes_remote_errors{kubernetes_namespace=\"$namespace\",system=~\"$source_system\"}[5m])) by (action)",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 21
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Errors by Downstream Action",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Pipes Errors"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 1,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum( rate(pipes_request_latency_sum{kubernetes_namespace=\"$namespace\",system=~\"$source_system\"}[5m]) / rate(pipes_request_latency_count{kubernetes_namespace=\"$namespace\",system=~\"$source_system\"}[5m]) ) by (system)",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 60
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Latency By Downstream System",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": 3,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 2,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum( rate(pipes_request_latency_sum{kubernetes_namespace=\"$namespace\",system=~\"$source_system\"}[5m]) / rate(pipes_request_latency_count{kubernetes_namespace=\"$namespace\",system=~\"$source_system\"}[5m]) ) by (action)  ",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 60
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Latency by Downstream Action",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Pipes Latency"
+    }
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": [
+      {
+        "allFormat": "glob",
+        "current": {
+          "tags": [],
+          "text": "wow",
+          "value": "wow"
+        },
+        "datasource": null,
+        "includeAll": false,
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "namespace",
+        "options": [
+          {
+            "selected": false,
+            "text": "build",
+            "value": "build"
+          },
+          {
+            "selected": false,
+            "text": "chris",
+            "value": "chris"
+          },
+          {
+            "selected": false,
+            "text": "default",
+            "value": "default"
+          },
+          {
+            "selected": false,
+            "text": "jason",
+            "value": "jason"
+          },
+          {
+            "selected": false,
+            "text": "logging",
+            "value": "logging"
+          },
+          {
+            "selected": false,
+            "text": "nft",
+            "value": "nft"
+          },
+          {
+            "selected": false,
+            "text": "openshift-infra",
+            "value": "openshift-infra"
+          },
+          {
+            "selected": false,
+            "text": "prometheus",
+            "value": "prometheus"
+          },
+          {
+            "selected": false,
+            "text": "recipes",
+            "value": "recipes"
+          },
+          {
+            "selected": false,
+            "text": "test",
+            "value": "test"
+          },
+          {
+            "selected": true,
+            "text": "wow",
+            "value": "wow"
+          }
+        ],
+        "query": "label_values(kubernetes_namespace)",
+        "refresh": false,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "allFormat": "pipe",
+        "current": {
+          "tags": [],
+          "text": "All",
+          "value": "CHL|COR|CRD|CSH|KBK|MIN|MRB|RSA|RTG|SDS|TAM|TWO"
+        },
+        "datasource": null,
+        "includeAll": true,
+        "multi": true,
+        "multiFormat": "pipe",
+        "name": "source_system",
+        "options": [
+          {
+            "selected": true,
+            "text": "All",
+            "value": "CHL|COR|CRD|CSH|KBK|MIN|MRB|RSA|RTG|SDS|TAM|TWO"
+          },
+          {
+            "selected": false,
+            "text": "CHL",
+            "value": "CHL"
+          },
+          {
+            "selected": false,
+            "text": "COR",
+            "value": "COR"
+          },
+          {
+            "selected": false,
+            "text": "CRD",
+            "value": "CRD"
+          },
+          {
+            "selected": false,
+            "text": "CSH",
+            "value": "CSH"
+          },
+          {
+            "selected": false,
+            "text": "KBK",
+            "value": "KBK"
+          },
+          {
+            "selected": false,
+            "text": "MIN",
+            "value": "MIN"
+          },
+          {
+            "selected": false,
+            "text": "MRB",
+            "value": "MRB"
+          },
+          {
+            "selected": false,
+            "text": "RSA",
+            "value": "RSA"
+          },
+          {
+            "selected": false,
+            "text": "RTG",
+            "value": "RTG"
+          },
+          {
+            "selected": false,
+            "text": "SDS",
+            "value": "SDS"
+          },
+          {
+            "selected": false,
+            "text": "TAM",
+            "value": "TAM"
+          },
+          {
+            "selected": false,
+            "text": "TWO",
+            "value": "TWO"
+          }
+        ],
+        "query": "label_values(system)",
+        "refresh": false,
+        "regex": "",
+        "type": "query"
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "schemaVersion": 8,
+  "version": 6,
+  "links": []
+}
