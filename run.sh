@@ -36,7 +36,7 @@ echo "Grafana is up and running."
 
 if [ ! -f /var/lib/grafana/.configured ]; then
   echo "Creating default prometheus datasource..."
-  curl -i -XPOST -H "${HEADER_ACCEPT}" -H "${HEADER_CONTENT_TYPE}" "http://${GRAFANA_USER}:${GRAFANA_PASSWD}@localhost:3000/api/datasources" -d '
+  #curl -i -XPOST -H "${HEADER_ACCEPT}" -H "${HEADER_CONTENT_TYPE}" "http://${GRAFANA_USER}:${GRAFANA_PASSWD}@localhost:3000/api/datasources" -d '
   { 
     "name": "kubernetes-prometheus",
     "type": "prometheus",
