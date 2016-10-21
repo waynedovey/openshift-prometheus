@@ -13,6 +13,9 @@ RUN chmod 777 /var/lib/grafana /usr/share/grafana/
 RUN chown grafana /var/lib/grafana
 RUN chown grafana /usr/share/grafana/
 
+ADD curl_7.38.0-4+deb8u4_amd64.deb /curl_7.38.0-4+deb8u4_amd64.deb
+RUN dpkg -i /curl_7.38.0-4+deb8u4_amd64.deb
+
 ADD run.sh /run.sh
 RUN chown grafana /run.sh
 RUN chmod 777 /run.sh
