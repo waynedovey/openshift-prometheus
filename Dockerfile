@@ -14,6 +14,8 @@ RUN chown grafana /var/lib/grafana
 RUN chown grafana /usr/share/grafana/
 
 ADD run.sh /run.sh
+RUN chown grafana /run.sh
+RUN chmod 777 /run.sh
 ADD dashboards /dashboards
 RUN chmod 777 /dashboards && chmod 666 /dashboards/*
 
