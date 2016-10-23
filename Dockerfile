@@ -1,4 +1,4 @@
-FROM grafana/grafana:2.6.0
+FROM grafana/grafana:3.1.1
 MAINTAINER Jimmi Dyson <jimmidyson@gmail.com>
 
 ENTRYPOINT ["/run.sh"]
@@ -18,8 +18,8 @@ RUN apt-get install dnscache-run
 #ADD curl_7.38.0-4+deb8u4_amd64.deb /curl_7.38.0-4+deb8u4_amd64.deb
 #ADD libcurl3_7.38.0-4+deb8u4_amd64.deb /libcurl3_7.38.0-4+deb8u4_amd64.deb
 #RUN dpkg -i /curl_7.38.0-4+deb8u4_amd64.deb /libcurl3_7.38.0-4+deb8u4_amd64.deb
-RUN apt-get update
-RUN apt-get -y --no-install-recommends install libfontconfig curl ca-certificates
+#RUN apt-get update
+#RUN apt-get -y --no-install-recommends install libfontconfig curl ca-certificates
 
 ADD run.sh /run.sh
 RUN chown grafana /run.sh
