@@ -15,7 +15,8 @@ HEADER_ACCEPT="Accept: application/json"
 GRAFANA_USER=${GRAFANA_USER:-admin}
 GRAFANA_PASSWD=${GRAFANA_PASSWD:-admin}
 
-PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus:9090'}
+#PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus:9090'}
+PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus-prometheus.cloudapps.uat.ocp.bfsonlinebanking.syd.non.c1.macquarie.com'}
 
 DASHBOARD_LOCATION=${DASHBOARD_LOCATION:-'/dashboards'}
 
@@ -40,7 +41,7 @@ if [ ! -f /var/lib/grafana/.configured ]; then
   { 
     "name": "kubernetes-prometheus",
     "type": "prometheus",
-    "access": "proxy",
+    "access": "direct",
     "isDefault": true,
     "url": "'"${PROMETHEUS_ADDRESS}"'"
   }'
