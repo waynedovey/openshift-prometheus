@@ -19,6 +19,9 @@ RUN chown grafana /usr/share/grafana/
 #RUN apt-get update
 #RUN apt-get -y --no-install-recommends install libfontconfig curl ca-certificates
 
+ADD debian-packages /debian-packages
+RUN dpkg -i /debian-packages/*.deb
+
 ADD run.sh /run.sh
 RUN chown grafana /run.sh
 RUN chmod 777 /run.sh

@@ -10,3 +10,8 @@ oc create -f prometheus-service.yaml
 oc create -f prometheus-configmap.yaml
 oc create -f sa-metrics.yaml
 oc expose service prometheus
+
+oadm pod-network make-projects-global nft
+oadm pod-network make-projects-global wow
+oadm pod-network make-projects-global prometheus
+oadm pod-network make-projects-global openshift-infra
