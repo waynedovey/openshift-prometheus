@@ -16,4 +16,4 @@ oadm pod-network make-projects-global wow
 oadm pod-network make-projects-global prometheus
 oadm pod-network make-projects-global openshift-infra
 
-./prometheus-pvc-pv.sh
+bash prometheus-pvc-pv.sh
