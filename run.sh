@@ -16,7 +16,7 @@ GRAFANA_USER=${GRAFANA_USER:-admin}
 GRAFANA_PASSWD=${GRAFANA_PASSWD:-admin}
 
 #PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus:9090'}
-PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus-prometheus.cloudapps.wdovey.ocp.bfsonlinebanking.syd.non.c1.macquarie.com'}
+PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus-prometheus.cloudapps.prod.ocp.bfsonlinebanking.syd.c1.macquarie.com'}
 
 DASHBOARD_LOCATION=${DASHBOARD_LOCATION:-'/dashboards'}
 
