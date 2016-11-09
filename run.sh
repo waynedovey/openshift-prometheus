@@ -15,8 +15,7 @@ HEADER_ACCEPT="Accept: application/json"
 GRAFANA_USER=${GRAFANA_USER:-admin}
 GRAFANA_PASSWD=${GRAFANA_PASSWD:-admin}
 
-#PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus:9090'}
-PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus-prometheus.cloudapps.sit.ocp.bfsonlinebanking.syd.c1.macquarie.com'}
+PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS:-'http://prometheus.prometheus.svc.cluster.local:9090'}
 
 DASHBOARD_LOCATION=${DASHBOARD_LOCATION:-'/dashboards'}
 
