@@ -28,6 +28,8 @@ RUN chmod 777 /run.sh
 ADD dashboards /dashboards
 RUN chmod 777 /dashboards && chmod 666 /dashboards/*
 
+RUN mkdir /var/lib/grafana/plugins/hawkular-datasource
 ADD hawkular-grafana-datasource /var/lib/grafana/plugins/hawkular-datasource
+RUN chmod 777 /var/lib/grafana/plugins/hawkular-datasource
 
 USER grafana
