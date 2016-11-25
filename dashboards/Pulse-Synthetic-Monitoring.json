@@ -57,7 +57,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\"}[1m])) by (service)",
+              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\"}[5m])) by (service)",
               "intervalFactor": 2,
               "metric": "",
               "refId": "A",
@@ -130,7 +130,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[1m])) by (service)",
+              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[5m])) by (service)",
               "interval": "",
               "intervalFactor": 5,
               "legendFormat": "",
@@ -197,7 +197,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(60 * rate(pulse_callByUser{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[1m])) by (service, user)",
+              "expr": "sum(60 * rate(pulse_callByUser{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[5m])) by (service, user)",
               "intervalFactor": 2,
               "refId": "A",
               "step": 2
