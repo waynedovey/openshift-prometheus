@@ -1,4 +1,4 @@
-FROM grafana/grafana:2.6.0
+FROM grafana/grafana:3.1.1
 MAINTAINER Jimmi Dyson <jimmidyson@gmail.com>
 
 ENTRYPOINT ["/run.sh"]
@@ -29,7 +29,7 @@ ADD dashboards /dashboards
 RUN chmod 777 /dashboards && chmod 666 /dashboards/*
 
 RUN mkdir /var/lib/grafana/plugins/hawkular-datasource
-ADD hawkular-grafana-datasource /hawkular-datasource
-RUN chmod 777 /hawkular-datasource
+ADD hawkular-datasource /var/lib/grafana/plugins/hawkular-datasource
+RUN chmod 777 /var/lib/grafana/plugins/hawkular-datasource
 
 USER grafana
