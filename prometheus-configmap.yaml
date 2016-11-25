@@ -35,8 +35,8 @@ data:
       }
   prometheus.yml: >-
     global:
-      scrape_interval:     5s
-      evaluation_interval: 5s
+      scrape_interval:     60s
+      evaluation_interval: 60s
 
     rule_files:
       - "*.rules"
