@@ -1,0 +1,519 @@
+{
+  "id": 1,
+  "title": "Moonracer",
+  "originalTitle": "Moonracer",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 2,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "appName": {
+              "text": "blurr",
+              "value": "blurr",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "moonracer_podCount{namespace=\"$namespace\",appName=\"$appName\"}",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 2
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Pod Count",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 166,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "appName": {
+              "text": "blurr",
+              "value": "blurr",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(changes(moonracer_unhealthy{namespace=\"$namespace\",appName=~\"$appName\"}[5m]))",
+              "intervalFactor": 5,
+              "refId": "A",
+              "step": 5
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Unhealthy events",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "id": 56,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "scopedVars": {
+            "appName": {
+              "text": "blurr",
+              "value": "blurr",
+              "selected": true
+            }
+          },
+          "span": 1,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "sum(moonracer_failedSync{namespace=\"$namespace\",appName=~\"$appName\"})",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 60
+            }
+          ],
+          "thresholds": "",
+          "title": "Failed sync count",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "repeat": "appName",
+      "scopedVars": {
+        "appName": {
+          "text": "blurr",
+          "value": "blurr",
+          "selected": true
+        }
+      },
+      "showTitle": true,
+      "title": "$appName"
+    }
+  ],
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {
+    "now": true,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": [
+      {
+        "allFormat": "glob",
+        "current": {
+          "text": "paul",
+          "value": "paul"
+        },
+        "datasource": null,
+        "includeAll": false,
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "namespace",
+        "options": [
+          {
+            "text": "connect",
+            "value": "connect",
+            "selected": false
+          },
+          {
+            "text": "connect-dev",
+            "value": "connect-dev",
+            "selected": false
+          },
+          {
+            "text": "connect-sit",
+            "value": "connect-sit",
+            "selected": false
+          },
+          {
+            "text": "doug",
+            "value": "doug",
+            "selected": false
+          },
+          {
+            "text": "jason",
+            "value": "jason",
+            "selected": false
+          },
+          {
+            "text": "jason2",
+            "value": "jason2",
+            "selected": false
+          },
+          {
+            "text": "jason3",
+            "value": "jason3",
+            "selected": false
+          },
+          {
+            "text": "jason4",
+            "value": "jason4",
+            "selected": false
+          },
+          {
+            "text": "kickback2",
+            "value": "kickback2",
+            "selected": false
+          },
+          {
+            "text": "nft",
+            "value": "nft",
+            "selected": false
+          },
+          {
+            "text": "paul",
+            "value": "paul",
+            "selected": true
+          },
+          {
+            "text": "wealth1",
+            "value": "wealth1",
+            "selected": false
+          },
+          {
+            "text": "wow",
+            "value": "wow",
+            "selected": false
+          }
+        ],
+        "query": "label_values(namespace)",
+        "refresh": true,
+        "type": "query"
+      },
+      {
+        "allFormat": "pipe",
+        "current": {
+          "text": "blurr",
+          "value": "blurr"
+        },
+        "datasource": null,
+        "includeAll": true,
+        "multi": true,
+        "multiFormat": "pipe",
+        "name": "appName",
+        "options": [
+          {
+            "text": "All",
+            "value": "blurr|blurr.149cdbda04be5b01|bumblebee|cashservices-v2|dirge|doubleheader|kickback|mindwipe|mirage|mortgageservices|pipes-account|pipes-home|pipes-payee|pipes-payment|pipes-quickview|pipes-statement|pipes-transaction|pipes-user|punch|rtg-mediator|sapm-proxy|sideways|skids|starscream|strafe|twofa-challenge|twofa-registration|wealth-pipes-account",
+            "selected": false
+          },
+          {
+            "text": "blurr",
+            "value": "blurr",
+            "selected": true
+          },
+          {
+            "text": "blurr.149cdbda04be5b01",
+            "value": "blurr.149cdbda04be5b01",
+            "selected": false
+          },
+          {
+            "text": "bumblebee",
+            "value": "bumblebee",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2",
+            "value": "cashservices-v2",
+            "selected": false
+          },
+          {
+            "text": "dirge",
+            "value": "dirge",
+            "selected": false
+          },
+          {
+            "text": "doubleheader",
+            "value": "doubleheader",
+            "selected": false
+          },
+          {
+            "text": "kickback",
+            "value": "kickback",
+            "selected": false
+          },
+          {
+            "text": "mindwipe",
+            "value": "mindwipe",
+            "selected": false
+          },
+          {
+            "text": "mirage",
+            "value": "mirage",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices",
+            "value": "mortgageservices",
+            "selected": false
+          },
+          {
+            "text": "pipes-account",
+            "value": "pipes-account",
+            "selected": false
+          },
+          {
+            "text": "pipes-home",
+            "value": "pipes-home",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee",
+            "value": "pipes-payee",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment",
+            "value": "pipes-payment",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview",
+            "value": "pipes-quickview",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement",
+            "value": "pipes-statement",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction",
+            "value": "pipes-transaction",
+            "selected": false
+          },
+          {
+            "text": "pipes-user",
+            "value": "pipes-user",
+            "selected": false
+          },
+          {
+            "text": "punch",
+            "value": "punch",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator",
+            "value": "rtg-mediator",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy",
+            "value": "sapm-proxy",
+            "selected": false
+          },
+          {
+            "text": "sideways",
+            "value": "sideways",
+            "selected": false
+          },
+          {
+            "text": "skids",
+            "value": "skids",
+            "selected": false
+          },
+          {
+            "text": "starscream",
+            "value": "starscream",
+            "selected": false
+          },
+          {
+            "text": "strafe",
+            "value": "strafe",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge",
+            "value": "twofa-challenge",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration",
+            "value": "twofa-registration",
+            "selected": false
+          },
+          {
+            "text": "wealth-pipes-account",
+            "value": "wealth-pipes-account",
+            "selected": false
+          }
+        ],
+        "query": "label_values(appName)",
+        "refresh": true,
+        "type": "query"
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "schemaVersion": 8,
+  "version": 14,
+  "links": []
+}
