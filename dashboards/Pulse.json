@@ -33,260 +33,8 @@
             "threshold2": null,
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
-          "id": 3,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 1,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": "job",
-      "scopedVars": {
-        "job": {
-          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 2,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": "job",
-      "scopedVars": {
-        "job": {
-          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
           "id": 4,
+          "isNew": true,
           "legend": {
             "avg": false,
             "current": false,
@@ -304,26 +52,16 @@
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "89212b30-0389-47b2-a1f7-ed21a1519198",
-              "value": "89212b30-0389-47b2-a1f7-ed21a1519198",
-              "selected": false
-            }
-          },
           "seriesOverrides": [],
           "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
+              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\"}[5m])) by (service)",
               "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
               "refId": "A",
-              "step": 2
+              "step": 60
             }
           ],
           "timeFrom": null,
@@ -361,6 +99,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 5,
+          "isNew": true,
           "legend": {
             "avg": false,
             "current": false,
@@ -378,26 +117,16 @@
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "89212b30-0389-47b2-a1f7-ed21a1519198",
-              "value": "89212b30-0389-47b2-a1f7-ed21a1519198",
-              "selected": false
-            }
-          },
           "seriesOverrides": [],
           "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
+              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[5m])) by (service)",
+              "intervalFactor": 2,
               "refId": "A",
-              "step": 5
+              "step": 60
             }
           ],
           "timeFrom": null,
@@ -417,17 +146,15 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
       "scopedVars": {
         "job": {
-          "text": "89212b30-0389-47b2-a1f7-ed21a1519198",
-          "value": "89212b30-0389-47b2-a1f7-ed21a1519198",
-          "selected": false
+          "selected": true,
+          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c"
         }
       },
       "showTitle": true,
-      "title": "$job"
+      "title": "TOTAL - $namespace"
     },
     {
       "collapse": false,
@@ -454,6 +181,89 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 6,
+          "isNew": true,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 12,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[10m])) by (service)",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 60
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Pulse Error Anomalies",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "repeat": null,
+      "scopedVars": {
+        "job": {
+          "selected": true,
+          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c"
+        }
+      },
+      "showTitle": false,
+      "title": ""
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 1,
+          "isNew": true,
           "legend": {
             "avg": false,
             "current": false,
@@ -473,9 +283,9 @@
           "renderer": "flot",
           "scopedVars": {
             "job": {
-              "text": "A",
-              "value": "A",
-              "selected": false
+              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "selected": true
             }
           },
           "seriesOverrides": [],
@@ -485,12 +295,9 @@
           "targets": [
             {
               "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
               "refId": "A",
-              "step": 2
+              "step": 60
             }
           ],
           "timeFrom": null,
@@ -527,7 +334,8 @@
             "threshold2": null,
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
-          "id": 7,
+          "id": 2,
+          "isNew": true,
           "legend": {
             "avg": false,
             "current": false,
@@ -547,9 +355,9 @@
           "renderer": "flot",
           "scopedVars": {
             "job": {
-              "text": "A",
-              "value": "A",
-              "selected": false
+              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "selected": true
             }
           },
           "seriesOverrides": [],
@@ -559,12 +367,9 @@
           "targets": [
             {
               "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
+              "intervalFactor": 2,
               "refId": "A",
-              "step": 5
+              "step": 60
             }
           ],
           "timeFrom": null,
@@ -583,185 +388,16 @@
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "A",
-          "value": "A",
-          "selected": false
-        }
-      },
+      "repeat": "job",
       "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 8,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "A new job",
-              "value": "A new job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 9,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "A new job",
-              "value": "A new job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
+      "title": "$job",
       "scopedVars": {
         "job": {
-          "text": "A new job",
-          "value": "A new job",
-          "selected": false
+          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "selected": true
         }
-      },
-      "showTitle": true,
-      "title": "$job"
+      }
     },
     {
       "collapse": false,
@@ -787,7 +423,8 @@
             "threshold2": null,
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
-          "id": 10,
+          "id": 3,
+          "isNew": true,
           "legend": {
             "avg": false,
             "current": false,
@@ -807,1679 +444,9 @@
           "renderer": "flot",
           "scopedVars": {
             "job": {
-              "text": "Hi",
-              "value": "Hi",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 11,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Hi",
-              "value": "Hi",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "Hi",
-          "value": "Hi",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 12,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Job",
-              "value": "Job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 13,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Job",
-              "value": "Job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "Job",
-          "value": "Job",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 14,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Test Job - Compare",
-              "value": "Test Job - Compare",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 15,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Test Job - Compare",
-              "value": "Test Job - Compare",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "Test Job - Compare",
-          "value": "Test Job - Compare",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 16,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Test Job 2",
-              "value": "Test Job 2",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 17,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Test Job 2",
-              "value": "Test Job 2",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "Test Job 2",
-          "value": "Test Job 2",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 18,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "fsadfsadfda",
-              "value": "fsadfsadfda",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 19,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "fsadfsadfda",
-              "value": "fsadfsadfda",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "fsadfsadfda",
-          "value": "fsadfsadfda",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 20,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "new job",
-              "value": "new job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 21,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "new job",
-              "value": "new job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "new job",
-          "value": "new job",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 22,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfasf",
-              "value": "sadfasf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 23,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfasf",
-              "value": "sadfasf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "sadfasf",
-          "value": "sadfasf",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 24,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfdsaf",
-              "value": "sadfdsaf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 25,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfdsaf",
-              "value": "sadfdsaf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "sadfdsaf",
-          "value": "sadfdsaf",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 26,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfsaf",
-              "value": "sadfsaf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 27,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfsaf",
-              "value": "sadfsaf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "sadfsaf",
-          "value": "sadfsaf",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 28,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "test job 1",
-              "value": "test job 1",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 29,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "test job 1",
-              "value": "test job 1",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "test job 1",
-          "value": "test job 1",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 30,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "89212b30-0389-47b2-a1f7-ed21a1519198",
-              "value": "89212b30-0389-47b2-a1f7-ed21a1519198",
-              "selected": false
+              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "selected": true
             }
           },
           "seriesOverrides": [],
@@ -2491,7 +458,7 @@
               "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 2
+              "step": 60
             }
           ],
           "timeFrom": null,
@@ -2510,1363 +477,22 @@
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
+      "repeat": "job",
+      "title": "",
       "scopedVars": {
         "job": {
-          "text": "89212b30-0389-47b2-a1f7-ed21a1519198",
-          "value": "89212b30-0389-47b2-a1f7-ed21a1519198",
-          "selected": false
+          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "selected": true
         }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 31,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "A",
-              "value": "A",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "A",
-          "value": "A",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 32,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "A new job",
-              "value": "A new job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "A new job",
-          "value": "A new job",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 33,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Hi",
-              "value": "Hi",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "Hi",
-          "value": "Hi",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 34,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Job",
-              "value": "Job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "Job",
-          "value": "Job",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 35,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Test Job - Compare",
-              "value": "Test Job - Compare",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "Test Job - Compare",
-          "value": "Test Job - Compare",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 36,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "Test Job 2",
-              "value": "Test Job 2",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "Test Job 2",
-          "value": "Test Job 2",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 37,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "fsadfsadfda",
-              "value": "fsadfsadfda",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "fsadfsadfda",
-          "value": "fsadfsadfda",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 38,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "new job",
-              "value": "new job",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "new job",
-          "value": "new job",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 39,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfasf",
-              "value": "sadfasf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "sadfasf",
-          "value": "sadfasf",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 40,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfdsaf",
-              "value": "sadfdsaf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "sadfdsaf",
-          "value": "sadfdsaf",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 41,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "sadfsaf",
-              "value": "sadfsaf",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "sadfsaf",
-          "value": "sadfsaf",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 42,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "test job 1",
-              "value": "test job 1",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "test job 1",
-          "value": "test job 1",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 43,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "test22",
-              "value": "test22",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Success Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 44,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "test22",
-              "value": "test22",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
-              "interval": "",
-              "intervalFactor": 5,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 5
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Error Calls - Rate per Minute",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 1,
-      "scopedVars": {
-        "job": {
-          "text": "test22",
-          "value": "test22",
-          "selected": false
-        }
-      },
-      "showTitle": true,
-      "title": "$job"
-    },
-    {
-      "collapse": false,
-      "editable": true,
-      "height": "250px",
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "leftLogBase": 1,
-            "leftMax": null,
-            "leftMin": null,
-            "rightLogBase": 1,
-            "rightMax": null,
-            "rightMin": null,
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 45,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 2,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "scopedVars": {
-            "job": {
-              "text": "test22",
-              "value": "test22",
-              "selected": false
-            }
-          },
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
-              "intervalFactor": 2,
-              "refId": "A",
-              "step": 2
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Pulse Error Anomalies",
-          "tooltip": {
-            "shared": true,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "x-axis": true,
-          "y-axis": true,
-          "y_formats": [
-            "short",
-            "short"
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": 1486003919086,
-      "repeatRowId": 2,
-      "scopedVars": {
-        "job": {
-          "text": "test22",
-          "value": "test22",
-          "selected": false
-        }
-      },
-      "showTitle": false,
-      "title": "Pulse API Call Status"
+      }
     }
   ],
   "time": {
-    "from": "now-30m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {
-    "now": true,
     "refresh_intervals": [
       "5s",
       "10s",
@@ -3896,7 +522,6 @@
       {
         "allFormat": "glob",
         "current": {
-          "tags": [],
           "text": "ci",
           "value": "ci"
         },
@@ -3907,122 +532,132 @@
         "name": "namespace",
         "options": [
           {
-            "selected": false,
             "text": "build",
-            "value": "build"
+            "value": "build",
+            "selected": false
           },
           {
-            "selected": false,
             "text": "chris",
-            "value": "chris"
+            "value": "chris",
+            "selected": false
           },
           {
-            "selected": true,
             "text": "ci",
-            "value": "ci"
+            "value": "ci",
+            "selected": true
           },
           {
-            "selected": false,
             "text": "connect-dev",
-            "value": "connect-dev"
+            "value": "connect-dev",
+            "selected": false
           },
           {
-            "selected": false,
             "text": "connect-sit",
-            "value": "connect-sit"
+            "value": "connect-sit",
+            "selected": false
           },
           {
-            "selected": false,
             "text": "default",
-            "value": "default"
+            "value": "default",
+            "selected": false
           },
           {
-            "selected": false,
             "text": "doug",
-            "value": "doug"
+            "value": "doug",
+            "selected": false
           },
           {
-            "selected": false,
-            "text": "ebanking",
-            "value": "ebanking"
+            "text": "doug2",
+            "value": "doug2",
+            "selected": false
           },
           {
-            "selected": false,
-            "text": "jason2",
-            "value": "jason2"
+            "text": "james",
+            "value": "james",
+            "selected": false
           },
           {
-            "selected": false,
-            "text": "kickback2",
-            "value": "kickback2"
+            "text": "jason",
+            "value": "jason",
+            "selected": false
           },
           {
-            "selected": false,
-            "text": "nft",
-            "value": "nft"
+            "text": "jcx3",
+            "value": "jcx3",
+            "selected": false
           },
           {
-            "selected": false,
-            "text": "openshift",
-            "value": "openshift"
+            "text": "jcx4",
+            "value": "jcx4",
+            "selected": false
           },
           {
-            "selected": false,
-            "text": "paul",
-            "value": "paul"
+            "text": "jcx5",
+            "value": "jcx5",
+            "selected": false
           },
           {
-            "selected": false,
+            "text": "jcx7",
+            "value": "jcx7",
+            "selected": false
+          },
+          {
+            "text": "openshift-infra",
+            "value": "openshift-infra",
+            "selected": false
+          },
+          {
             "text": "prometheus",
-            "value": "prometheus"
+            "value": "prometheus",
+            "selected": false
           },
           {
-            "selected": false,
             "text": "recipes",
-            "value": "recipes"
+            "value": "recipes",
+            "selected": false
           },
           {
-            "selected": false,
-            "text": "shared-services",
-            "value": "shared-services"
+            "text": "test-project",
+            "value": "test-project",
+            "selected": false
           },
           {
-            "selected": false,
-            "text": "wealth1",
-            "value": "wealth1"
+            "text": "wealth-sit",
+            "value": "wealth-sit",
+            "selected": false
           },
           {
-            "selected": false,
+            "text": "wealth-uat",
+            "value": "wealth-uat",
+            "selected": false
+          },
+          {
             "text": "wow",
-            "value": "wow"
+            "value": "wow",
+            "selected": false
           }
         ],
         "query": "label_values(kubernetes_namespace)",
-        "refresh": false,
-        "regex": "",
+        "refresh": true,
         "type": "query"
       },
       {
         "allFormat": "pipe",
         "current": {
-          "text": "All",
-          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c|89212b30-0389-47b2-a1f7-ed21a1519198|A|A new job|Hi|Job|Test Job - Compare|Test Job 2|fsadfsadfda|new job|sadfasf|sadfdsaf|sadfsaf|test job 1|test22"
+          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "tags": []
         },
         "datasource": null,
-        "includeAll": true,
+        "includeAll": false,
         "multi": true,
-        "multiFormat": "glob",
+        "multiFormat": "pipe",
         "name": "job",
         "options": [
           {
-            "text": "All",
-            "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c|89212b30-0389-47b2-a1f7-ed21a1519198|A|A new job|Hi|Job|Test Job - Compare|Test Job 2|fsadfsadfda|new job|sadfasf|sadfdsaf|sadfsaf|test job 1|test22",
-            "selected": true
-          },
-          {
             "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
             "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-            "selected": false
+            "selected": true
           },
           {
             "text": "89212b30-0389-47b2-a1f7-ed21a1519198",
@@ -4040,13 +675,33 @@
             "selected": false
           },
           {
+            "text": "David Openshift job ",
+            "value": "David Openshift job ",
+            "selected": false
+          },
+          {
+            "text": "HI",
+            "value": "HI",
+            "selected": false
+          },
+          {
             "text": "Hi",
             "value": "Hi",
             "selected": false
           },
           {
+            "text": "JOB NAME",
+            "value": "JOB NAME",
+            "selected": false
+          },
+          {
             "text": "Job",
             "value": "Job",
+            "selected": false
+          },
+          {
+            "text": "Test",
+            "value": "Test",
             "selected": false
           },
           {
@@ -4060,8 +715,43 @@
             "selected": false
           },
           {
+            "text": "WOW Apigee",
+            "value": "WOW Apigee",
+            "selected": false
+          },
+          {
+            "text": "WOW Apigee 2 ",
+            "value": "WOW Apigee 2 ",
+            "selected": false
+          },
+          {
+            "text": "WOW Apigee 3",
+            "value": "WOW Apigee 3",
+            "selected": false
+          },
+          {
+            "text": "WOW Apigee job",
+            "value": "WOW Apigee job",
+            "selected": false
+          },
+          {
+            "text": "a new job",
+            "value": "a new job",
+            "selected": false
+          },
+          {
+            "text": "asdfjkl;asjf;l;ljgsjfl;j;jflsjkljskldjf fslf sdafs afad ",
+            "value": "asdfjkl;asjf;l;ljgsjfl;j;jflsjkljskldjf fslf sdafs afad ",
+            "selected": false
+          },
+          {
             "text": "fsadfsadfda",
             "value": "fsadfsadfda",
+            "selected": false
+          },
+          {
+            "text": "klfjkdslfjkl",
+            "value": "klfjkdslfjkl",
             "selected": false
           },
           {
@@ -4085,6 +775,11 @@
             "selected": false
           },
           {
+            "text": "test",
+            "value": "test",
+            "selected": false
+          },
+          {
             "text": "test job 1",
             "value": "test job 1",
             "selected": false
@@ -4093,6 +788,11 @@
             "text": "test22",
             "value": "test22",
             "selected": false
+          },
+          {
+            "text": "wow",
+            "value": "wow",
+            "selected": false
           }
         ],
         "query": "label_values(pulseJob)",
@@ -4100,25 +800,35 @@
         "type": "query"
       },
       {
-        "allFormat": "pipe",
+        "allFormat": "glob",
         "current": {
-          "text": "All",
-          "value": "fsadfsadf|nft|testbackend|wow|wow-internal|wow2"
+          "text": "WOW APIGEE",
+          "value": "WOW APIGEE"
         },
         "datasource": null,
-        "includeAll": true,
+        "includeAll": false,
         "multi": false,
         "multiFormat": "glob",
         "name": "backend",
         "options": [
           {
-            "text": "All",
-            "value": "fsadfsadf|nft|testbackend|wow|wow-internal|wow2",
+            "text": "WOW APIGEE",
+            "value": "WOW APIGEE",
             "selected": true
+          },
+          {
+            "text": "WOW Apigee",
+            "value": "WOW Apigee",
+            "selected": false
           },
           {
             "text": "fsadfsadf",
             "value": "fsadfsadf",
+            "selected": false
+          },
+          {
+            "text": "jason",
+            "value": "jason",
             "selected": false
           },
           {
@@ -4152,26 +862,21 @@
         "type": "query"
       },
       {
-        "allFormat": "pipe",
+        "allFormat": "glob",
         "current": {
-          "text": "All",
-          "value": "12341234|12345678|31176142|31231232|33641432"
+          "text": "12341234",
+          "value": "12341234"
         },
         "datasource": null,
-        "includeAll": true,
+        "includeAll": false,
         "multi": false,
-        "multiFormat": "pipe",
+        "multiFormat": "glob",
         "name": "user",
         "options": [
           {
-            "text": "All",
-            "value": "12341234|12345678|31176142|31231232|33641432",
-            "selected": true
-          },
-          {
             "text": "12341234",
             "value": "12341234",
-            "selected": false
+            "selected": true
           },
           {
             "text": "12345678",
@@ -4192,6 +897,11 @@
             "text": "33641432",
             "value": "33641432",
             "selected": false
+          },
+          {
+            "text": "62836919",
+            "value": "62836919",
+            "selected": false
           }
         ],
         "query": "label_values(user)",
@@ -4203,8 +913,7 @@
   "annotations": {
     "list": []
   },
-  "refresh": false,
   "schemaVersion": 8,
-  "version": 9,
+  "version": 8,
   "links": []
 }
