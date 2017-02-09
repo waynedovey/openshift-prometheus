@@ -246,8 +246,8 @@
           "renderer": "flot",
           "scopedVars": {
             "appName": {
-              "text": "blurr",
-              "value": "blurr",
+              "text": "pipes-account",
+              "value": "pipes-account",
               "selected": true
             }
           },
@@ -319,8 +319,8 @@
           "renderer": "flot",
           "scopedVars": {
             "appName": {
-              "text": "blurr",
-              "value": "blurr",
+              "text": "pipes-account",
+              "value": "pipes-account",
               "selected": true
             }
           },
@@ -377,8 +377,8 @@
           "prefixFontSize": "50%",
           "scopedVars": {
             "appName": {
-              "text": "blurr",
-              "value": "blurr",
+              "text": "pipes-account",
+              "value": "pipes-account",
               "selected": true
             }
           },
@@ -414,8 +414,8 @@
       "repeat": "appName",
       "scopedVars": {
         "appName": {
-          "text": "blurr",
-          "value": "blurr",
+          "text": "pipes-account",
+          "value": "pipes-account",
           "selected": true
         }
       },
@@ -458,8 +458,9 @@
       {
         "allFormat": "glob",
         "current": {
-          "text": "chris",
-          "value": "chris"
+          "text": "nft",
+          "value": "nft",
+          "tags": []
         },
         "datasource": null,
         "includeAll": false,
@@ -470,7 +471,7 @@
           {
             "text": "chris",
             "value": "chris",
-            "selected": true
+            "selected": false
           },
           {
             "text": "connect",
@@ -493,8 +494,28 @@
             "selected": false
           },
           {
+            "text": "jason3",
+            "value": "jason3",
+            "selected": false
+          },
+          {
+            "text": "jcx",
+            "value": "jcx",
+            "selected": false
+          },
+          {
             "text": "jcx7",
             "value": "jcx7",
+            "selected": false
+          },
+          {
+            "text": "nft",
+            "value": "nft",
+            "selected": true
+          },
+          {
+            "text": "paul",
+            "value": "paul",
             "selected": false
           },
           {
@@ -516,6 +537,11 @@
             "text": "wow",
             "value": "wow",
             "selected": false
+          },
+          {
+            "text": "wow2",
+            "value": "wow2",
+            "selected": false
           }
         ],
         "query": "label_values(namespace)",
@@ -525,8 +551,9 @@
       {
         "allFormat": "pipe",
         "current": {
-          "text": "blurr",
-          "value": "blurr"
+          "text": "pipes-account",
+          "value": "pipes-account",
+          "tags": []
         },
         "datasource": null,
         "includeAll": false,
@@ -537,46 +564,6 @@
           {
             "text": "blurr",
             "value": "blurr",
-            "selected": true
-          },
-          {
-            "text": "blurr.149ff35dffefb396",
-            "value": "blurr.149ff35dffefb396",
-            "selected": false
-          },
-          {
-            "text": "blurr.14a098ef4496fea4",
-            "value": "blurr.14a098ef4496fea4",
-            "selected": false
-          },
-          {
-            "text": "blurr.14a09a3265731198",
-            "value": "blurr.14a09a3265731198",
-            "selected": false
-          },
-          {
-            "text": "blurr.14a0a7ae51badb91",
-            "value": "blurr.14a0a7ae51badb91",
-            "selected": false
-          },
-          {
-            "text": "blurr.14a0a9584f519e05",
-            "value": "blurr.14a0a9584f519e05",
-            "selected": false
-          },
-          {
-            "text": "blurr.14a0d969a65f1dfd",
-            "value": "blurr.14a0d969a65f1dfd",
-            "selected": false
-          },
-          {
-            "text": "bumblebee",
-            "value": "bumblebee",
-            "selected": false
-          },
-          {
-            "text": "bumblebee.14a098ef745ee86a",
-            "value": "bumblebee.14a098ef745ee86a",
             "selected": false
           },
           {
@@ -585,88 +572,8 @@
             "selected": false
           },
           {
-            "text": "cashservices-v2.149ff35f35ea4f10",
-            "value": "cashservices-v2.149ff35f35ea4f10",
-            "selected": false
-          },
-          {
-            "text": "cashservices-v2.14a098edce50570a",
-            "value": "cashservices-v2.14a098edce50570a",
-            "selected": false
-          },
-          {
-            "text": "cashservices-v2.14a098efdf6f7278",
-            "value": "cashservices-v2.14a098efdf6f7278",
-            "selected": false
-          },
-          {
-            "text": "cashservices-v2.14a09a31bbb99f22",
-            "value": "cashservices-v2.14a09a31bbb99f22",
-            "selected": false
-          },
-          {
-            "text": "cashservices-v2.14a0a7adbc10d97b",
-            "value": "cashservices-v2.14a0a7adbc10d97b",
-            "selected": false
-          },
-          {
-            "text": "cashservices-v2.14a0a957e0c71722",
-            "value": "cashservices-v2.14a0a957e0c71722",
-            "selected": false
-          },
-          {
-            "text": "cashservices-v2.14a0d96beef95bf8",
-            "value": "cashservices-v2.14a0d96beef95bf8",
-            "selected": false
-          },
-          {
-            "text": "connectuiv2",
-            "value": "connectuiv2",
-            "selected": false
-          },
-          {
-            "text": "dirge",
-            "value": "dirge",
-            "selected": false
-          },
-          {
             "text": "doubleheader",
             "value": "doubleheader",
-            "selected": false
-          },
-          {
-            "text": "doubleheader.149ff35e31884df5",
-            "value": "doubleheader.149ff35e31884df5",
-            "selected": false
-          },
-          {
-            "text": "doubleheader.14a098efa760177d",
-            "value": "doubleheader.14a098efa760177d",
-            "selected": false
-          },
-          {
-            "text": "doubleheader.14a098f4510e43c7",
-            "value": "doubleheader.14a098f4510e43c7",
-            "selected": false
-          },
-          {
-            "text": "doubleheader.14a09a32772f02ec",
-            "value": "doubleheader.14a09a32772f02ec",
-            "selected": false
-          },
-          {
-            "text": "doubleheader.14a0a7ad3992a1d6",
-            "value": "doubleheader.14a0a7ad3992a1d6",
-            "selected": false
-          },
-          {
-            "text": "doubleheader.14a0a95864467a94",
-            "value": "doubleheader.14a0a95864467a94",
-            "selected": false
-          },
-          {
-            "text": "doubleheader.14a0d96ba8303e03",
-            "value": "doubleheader.14a0d96ba8303e03",
             "selected": false
           },
           {
@@ -675,78 +582,8 @@
             "selected": false
           },
           {
-            "text": "kickback.149ff35f12c065a8",
-            "value": "kickback.149ff35f12c065a8",
-            "selected": false
-          },
-          {
-            "text": "kickback.14a098f48845897c",
-            "value": "kickback.14a098f48845897c",
-            "selected": false
-          },
-          {
-            "text": "kickback.14a09a30b0c2f586",
-            "value": "kickback.14a09a30b0c2f586",
-            "selected": false
-          },
-          {
-            "text": "kickback.14a0a7ad537931e1",
-            "value": "kickback.14a0a7ad537931e1",
-            "selected": false
-          },
-          {
-            "text": "kickback.14a0a957f2dc7bc3",
-            "value": "kickback.14a0a957f2dc7bc3",
-            "selected": false
-          },
-          {
-            "text": "kickback.14a0d96bbb76a7ea",
-            "value": "kickback.14a0d96bbb76a7ea",
-            "selected": false
-          },
-          {
-            "text": "kickback.14a12871d22c72e3",
-            "value": "kickback.14a12871d22c72e3",
-            "selected": false
-          },
-          {
             "text": "mindwipe",
             "value": "mindwipe",
-            "selected": false
-          },
-          {
-            "text": "mindwipe.149ff35ced667b0d",
-            "value": "mindwipe.149ff35ced667b0d",
-            "selected": false
-          },
-          {
-            "text": "mindwipe.14a098ef81bafc6f",
-            "value": "mindwipe.14a098ef81bafc6f",
-            "selected": false
-          },
-          {
-            "text": "mindwipe.14a098f4341c96de",
-            "value": "mindwipe.14a098f4341c96de",
-            "selected": false
-          },
-          {
-            "text": "mindwipe.14a09a3285fd106a",
-            "value": "mindwipe.14a09a3285fd106a",
-            "selected": false
-          },
-          {
-            "text": "mindwipe.14a0a7ab1a6d60e7",
-            "value": "mindwipe.14a0a7ab1a6d60e7",
-            "selected": false
-          },
-          {
-            "text": "mindwipe.14a0a955802803f8",
-            "value": "mindwipe.14a0a955802803f8",
-            "selected": false
-          },
-          {
-            "text": "mindwipe.14a0d96bc808151f",
-            "value": "mindwipe.14a0d96bc808151f",
             "selected": false
           },
           {
@@ -755,138 +592,18 @@
             "selected": false
           },
           {
-            "text": "mirage.149ff35e48a7b067",
-            "value": "mirage.149ff35e48a7b067",
-            "selected": false
-          },
-          {
-            "text": "mirage.14a098efb0f6643e",
-            "value": "mirage.14a098efb0f6643e",
-            "selected": false
-          },
-          {
-            "text": "mirage.14a098f454fcf85e",
-            "value": "mirage.14a098f454fcf85e",
-            "selected": false
-          },
-          {
             "text": "mortgageservices",
             "value": "mortgageservices",
             "selected": false
           },
           {
-            "text": "mortgageservices.149ff35d3d3c2847",
-            "value": "mortgageservices.149ff35d3d3c2847",
-            "selected": false
-          },
-          {
-            "text": "mortgageservices.14a098ef8b06f50f",
-            "value": "mortgageservices.14a098ef8b06f50f",
-            "selected": false
-          },
-          {
-            "text": "mortgageservices.14a098f4371fb510",
-            "value": "mortgageservices.14a098f4371fb510",
-            "selected": false
-          },
-          {
-            "text": "mortgageservices.14a09a3115c1cb31",
-            "value": "mortgageservices.14a09a3115c1cb31",
-            "selected": false
-          },
-          {
-            "text": "mortgageservices.14a0a7add51d38d2",
-            "value": "mortgageservices.14a0a7add51d38d2",
-            "selected": false
-          },
-          {
-            "text": "mortgageservices.14a0a95809df62e6",
-            "value": "mortgageservices.14a0a95809df62e6",
-            "selected": false
-          },
-          {
-            "text": "mortgageservices.14a0d96bd34d5ddb",
-            "value": "mortgageservices.14a0d96bd34d5ddb",
-            "selected": false
-          },
-          {
             "text": "pipes-account",
             "value": "pipes-account",
-            "selected": false
-          },
-          {
-            "text": "pipes-account.149ff35f088be6ec",
-            "value": "pipes-account.149ff35f088be6ec",
-            "selected": false
-          },
-          {
-            "text": "pipes-account.14a098efccf69bef",
-            "value": "pipes-account.14a098efccf69bef",
-            "selected": false
-          },
-          {
-            "text": "pipes-account.14a098f463ff72dc",
-            "value": "pipes-account.14a098f463ff72dc",
-            "selected": false
-          },
-          {
-            "text": "pipes-account.14a09a32915cebbe",
-            "value": "pipes-account.14a09a32915cebbe",
-            "selected": false
-          },
-          {
-            "text": "pipes-account.14a0a7ae64b3ae1c",
-            "value": "pipes-account.14a0a7ae64b3ae1c",
-            "selected": false
-          },
-          {
-            "text": "pipes-account.14a0a95899635dbe",
-            "value": "pipes-account.14a0a95899635dbe",
-            "selected": false
-          },
-          {
-            "text": "pipes-account.14a0d96afc958072",
-            "value": "pipes-account.14a0d96afc958072",
-            "selected": false
+            "selected": true
           },
           {
             "text": "pipes-home",
             "value": "pipes-home",
-            "selected": false
-          },
-          {
-            "text": "pipes-home.149ff35e5c123bec",
-            "value": "pipes-home.149ff35e5c123bec",
-            "selected": false
-          },
-          {
-            "text": "pipes-home.14a098efb94c54f9",
-            "value": "pipes-home.14a098efb94c54f9",
-            "selected": false
-          },
-          {
-            "text": "pipes-home.14a098f45a87838d",
-            "value": "pipes-home.14a098f45a87838d",
-            "selected": false
-          },
-          {
-            "text": "pipes-home.14a09a31d54fa28d",
-            "value": "pipes-home.14a09a31d54fa28d",
-            "selected": false
-          },
-          {
-            "text": "pipes-home.14a0a7acab1ffc52",
-            "value": "pipes-home.14a0a7acab1ffc52",
-            "selected": false
-          },
-          {
-            "text": "pipes-home.14a0a957141da43f",
-            "value": "pipes-home.14a0a957141da43f",
-            "selected": false
-          },
-          {
-            "text": "pipes-home.14a0d96bf5d75043",
-            "value": "pipes-home.14a0d96bf5d75043",
             "selected": false
           },
           {
@@ -895,73 +612,8 @@
             "selected": false
           },
           {
-            "text": "pipes-payee.149ff35eb6d8dd88",
-            "value": "pipes-payee.149ff35eb6d8dd88",
-            "selected": false
-          },
-          {
-            "text": "pipes-payee.14a098efdab14f91",
-            "value": "pipes-payee.14a098efdab14f91",
-            "selected": false
-          },
-          {
-            "text": "pipes-payee.14a09a3299687e98",
-            "value": "pipes-payee.14a09a3299687e98",
-            "selected": false
-          },
-          {
-            "text": "pipes-payee.14a0a7ad96c3cfa1",
-            "value": "pipes-payee.14a0a7ad96c3cfa1",
-            "selected": false
-          },
-          {
-            "text": "pipes-payee.14a0a95820da2074",
-            "value": "pipes-payee.14a0a95820da2074",
-            "selected": false
-          },
-          {
-            "text": "pipes-payee.14a0d96b2f1f7583",
-            "value": "pipes-payee.14a0d96b2f1f7583",
-            "selected": false
-          },
-          {
             "text": "pipes-payment",
             "value": "pipes-payment",
-            "selected": false
-          },
-          {
-            "text": "pipes-payment.149ff35ec4b3451c",
-            "value": "pipes-payment.149ff35ec4b3451c",
-            "selected": false
-          },
-          {
-            "text": "pipes-payment.14a098efc1bf38b5",
-            "value": "pipes-payment.14a098efc1bf38b5",
-            "selected": false
-          },
-          {
-            "text": "pipes-payment.14a098f477b53f1a",
-            "value": "pipes-payment.14a098f477b53f1a",
-            "selected": false
-          },
-          {
-            "text": "pipes-payment.14a09a320bd6813b",
-            "value": "pipes-payment.14a09a320bd6813b",
-            "selected": false
-          },
-          {
-            "text": "pipes-payment.14a0a7ae1859b966",
-            "value": "pipes-payment.14a0a7ae1859b966",
-            "selected": false
-          },
-          {
-            "text": "pipes-payment.14a0a958745a135e",
-            "value": "pipes-payment.14a0a958745a135e",
-            "selected": false
-          },
-          {
-            "text": "pipes-payment.14a0d96a5372f44e",
-            "value": "pipes-payment.14a0d96a5372f44e",
             "selected": false
           },
           {
@@ -970,73 +622,8 @@
             "selected": false
           },
           {
-            "text": "pipes-quickview.149ff35d992a94fb",
-            "value": "pipes-quickview.149ff35d992a94fb",
-            "selected": false
-          },
-          {
-            "text": "pipes-quickview.14a098f43e9de55c",
-            "value": "pipes-quickview.14a098f43e9de55c",
-            "selected": false
-          },
-          {
-            "text": "pipes-quickview.14a09a31f8bc9b42",
-            "value": "pipes-quickview.14a09a31f8bc9b42",
-            "selected": false
-          },
-          {
-            "text": "pipes-quickview.14a0a7aceab92273",
-            "value": "pipes-quickview.14a0a7aceab92273",
-            "selected": false
-          },
-          {
-            "text": "pipes-quickview.14a0a958a3da892d",
-            "value": "pipes-quickview.14a0a958a3da892d",
-            "selected": false
-          },
-          {
-            "text": "pipes-quickview.14a0d96b394e49eb",
-            "value": "pipes-quickview.14a0d96b394e49eb",
-            "selected": false
-          },
-          {
             "text": "pipes-statement",
             "value": "pipes-statement",
-            "selected": false
-          },
-          {
-            "text": "pipes-statement.149ff35d7aad2b01",
-            "value": "pipes-statement.149ff35d7aad2b01",
-            "selected": false
-          },
-          {
-            "text": "pipes-statement.14a098f43a98bfa5",
-            "value": "pipes-statement.14a098f43a98bfa5",
-            "selected": false
-          },
-          {
-            "text": "pipes-statement.14a098fb3239ed85",
-            "value": "pipes-statement.14a098fb3239ed85",
-            "selected": false
-          },
-          {
-            "text": "pipes-statement.14a09a314c5e7253",
-            "value": "pipes-statement.14a09a314c5e7253",
-            "selected": false
-          },
-          {
-            "text": "pipes-statement.14a0a7ad80632707",
-            "value": "pipes-statement.14a0a7ad80632707",
-            "selected": false
-          },
-          {
-            "text": "pipes-statement.14a0a95880ec9bd9",
-            "value": "pipes-statement.14a0a95880ec9bd9",
-            "selected": false
-          },
-          {
-            "text": "pipes-statement.14a0d96ab22cf269",
-            "value": "pipes-statement.14a0d96ab22cf269",
             "selected": false
           },
           {
@@ -1045,78 +632,8 @@
             "selected": false
           },
           {
-            "text": "pipes-transaction.149ff35e9b2f051d",
-            "value": "pipes-transaction.149ff35e9b2f051d",
-            "selected": false
-          },
-          {
-            "text": "pipes-transaction.14a098f46771e70c",
-            "value": "pipes-transaction.14a098f46771e70c",
-            "selected": false
-          },
-          {
-            "text": "pipes-transaction.14a098fb03ed2818",
-            "value": "pipes-transaction.14a098fb03ed2818",
-            "selected": false
-          },
-          {
-            "text": "pipes-transaction.14a09a3130d535c7",
-            "value": "pipes-transaction.14a09a3130d535c7",
-            "selected": false
-          },
-          {
-            "text": "pipes-transaction.14a0a7abf6a53ea9",
-            "value": "pipes-transaction.14a0a7abf6a53ea9",
-            "selected": false
-          },
-          {
-            "text": "pipes-transaction.14a0a9579c5a9104",
-            "value": "pipes-transaction.14a0a9579c5a9104",
-            "selected": false
-          },
-          {
-            "text": "pipes-transaction.14a0d96bfe6ba675",
-            "value": "pipes-transaction.14a0d96bfe6ba675",
-            "selected": false
-          },
-          {
             "text": "pipes-user",
             "value": "pipes-user",
-            "selected": false
-          },
-          {
-            "text": "pipes-user.149ff35ea84a6380",
-            "value": "pipes-user.149ff35ea84a6380",
-            "selected": false
-          },
-          {
-            "text": "pipes-user.14a098f46d4323f3",
-            "value": "pipes-user.14a098f46d4323f3",
-            "selected": false
-          },
-          {
-            "text": "pipes-user.14a098fb074b1064",
-            "value": "pipes-user.14a098fb074b1064",
-            "selected": false
-          },
-          {
-            "text": "pipes-user.14a09a3165d01478",
-            "value": "pipes-user.14a09a3165d01478",
-            "selected": false
-          },
-          {
-            "text": "pipes-user.14a0a7ae03415600",
-            "value": "pipes-user.14a0a7ae03415600",
-            "selected": false
-          },
-          {
-            "text": "pipes-user.14a0a958b0abaf46",
-            "value": "pipes-user.14a0a958b0abaf46",
-            "selected": false
-          },
-          {
-            "text": "pipes-user.14a0d96c28aabeae",
-            "value": "pipes-user.14a0d96c28aabeae",
             "selected": false
           },
           {
@@ -1125,48 +642,8 @@
             "selected": false
           },
           {
-            "text": "punch.149ff35dba54c49c",
-            "value": "punch.149ff35dba54c49c",
-            "selected": false
-          },
-          {
-            "text": "punch.14a098f441f9aeb4",
-            "value": "punch.14a098f441f9aeb4",
-            "selected": false
-          },
-          {
-            "text": "punch.14a09a2f2b0dc0ad",
-            "value": "punch.14a09a2f2b0dc0ad",
-            "selected": false
-          },
-          {
-            "text": "punch.14a0a7adeb7e3d38",
-            "value": "punch.14a0a7adeb7e3d38",
-            "selected": false
-          },
-          {
-            "text": "punch.14a0a9575a469ef9",
-            "value": "punch.14a0a9575a469ef9",
-            "selected": false
-          },
-          {
-            "text": "punch.14a0d96c37443227",
-            "value": "punch.14a0d96c37443227",
-            "selected": false
-          },
-          {
             "text": "rtg-mediator",
             "value": "rtg-mediator",
-            "selected": false
-          },
-          {
-            "text": "rtg-mediator.14a098f445534110",
-            "value": "rtg-mediator.14a098f445534110",
-            "selected": false
-          },
-          {
-            "text": "rtg-mediator.14a098fb20fa2d13",
-            "value": "rtg-mediator.14a098fb20fa2d13",
             "selected": false
           },
           {
@@ -1175,78 +652,8 @@
             "selected": false
           },
           {
-            "text": "sapm-proxy.149ff35e919ec3d2",
-            "value": "sapm-proxy.149ff35e919ec3d2",
-            "selected": false
-          },
-          {
-            "text": "sapm-proxy.14a098e7505c0c2b",
-            "value": "sapm-proxy.14a098e7505c0c2b",
-            "selected": false
-          },
-          {
-            "text": "sapm-proxy.14a09a32559f2ef5",
-            "value": "sapm-proxy.14a09a32559f2ef5",
-            "selected": false
-          },
-          {
-            "text": "sapm-proxy.14a0a7ad1fc74d33",
-            "value": "sapm-proxy.14a0a7ad1fc74d33",
-            "selected": false
-          },
-          {
-            "text": "sapm-proxy.14a0a957b5ed0b5b",
-            "value": "sapm-proxy.14a0a957b5ed0b5b",
-            "selected": false
-          },
-          {
-            "text": "sapm-proxy.14a0d96872a2c919",
-            "value": "sapm-proxy.14a0d96872a2c919",
-            "selected": false
-          },
-          {
             "text": "sideways",
             "value": "sideways",
-            "selected": false
-          },
-          {
-            "text": "sideways.149ff35f1b3abebb",
-            "value": "sideways.149ff35f1b3abebb",
-            "selected": false
-          },
-          {
-            "text": "sideways.14a098f48c4763bb",
-            "value": "sideways.14a098f48c4763bb",
-            "selected": false
-          },
-          {
-            "text": "sideways.14a098fb1d994bd5",
-            "value": "sideways.14a098fb1d994bd5",
-            "selected": false
-          },
-          {
-            "text": "sideways.14a09a32222bc77f",
-            "value": "sideways.14a09a32222bc77f",
-            "selected": false
-          },
-          {
-            "text": "sideways.14a0a7ae38bb0a9c",
-            "value": "sideways.14a0a7ae38bb0a9c",
-            "selected": false
-          },
-          {
-            "text": "sideways.14a0a95889226433",
-            "value": "sideways.14a0a95889226433",
-            "selected": false
-          },
-          {
-            "text": "sideways.14a0d96b7b5cf1c1",
-            "value": "sideways.14a0d96b7b5cf1c1",
-            "selected": false
-          },
-          {
-            "text": "skids",
-            "value": "skids",
             "selected": false
           },
           {
@@ -1255,78 +662,8 @@
             "selected": false
           },
           {
-            "text": "starscream.149ff35e1cfbf0e0",
-            "value": "starscream.149ff35e1cfbf0e0",
-            "selected": false
-          },
-          {
-            "text": "starscream.14a098f4491890d3",
-            "value": "starscream.14a098f4491890d3",
-            "selected": false
-          },
-          {
-            "text": "starscream.14a098fb3bcd7188",
-            "value": "starscream.14a098fb3bcd7188",
-            "selected": false
-          },
-          {
-            "text": "starscream.14a09a32a91fc628",
-            "value": "starscream.14a09a32a91fc628",
-            "selected": false
-          },
-          {
-            "text": "starscream.14a0a7ae47845318",
-            "value": "starscream.14a0a7ae47845318",
-            "selected": false
-          },
-          {
-            "text": "starscream.14a0a958ca3bb335",
-            "value": "starscream.14a0a958ca3bb335",
-            "selected": false
-          },
-          {
-            "text": "starscream.14a0d96bdd9038df",
-            "value": "starscream.14a0d96bdd9038df",
-            "selected": false
-          },
-          {
             "text": "strafe",
             "value": "strafe",
-            "selected": false
-          },
-          {
-            "text": "strafe.149ff35ee39f37db",
-            "value": "strafe.149ff35ee39f37db",
-            "selected": false
-          },
-          {
-            "text": "strafe.14a098f47bbb2e90",
-            "value": "strafe.14a098f47bbb2e90",
-            "selected": false
-          },
-          {
-            "text": "strafe.14a098fb1159889b",
-            "value": "strafe.14a098fb1159889b",
-            "selected": false
-          },
-          {
-            "text": "strafe.14a09a317bd34550",
-            "value": "strafe.14a09a317bd34550",
-            "selected": false
-          },
-          {
-            "text": "strafe.14a0a7ae6fefba4d",
-            "value": "strafe.14a0a7ae6fefba4d",
-            "selected": false
-          },
-          {
-            "text": "strafe.14a0a95783497e5a",
-            "value": "strafe.14a0a95783497e5a",
-            "selected": false
-          },
-          {
-            "text": "strafe.14a0d96c076c89f2",
-            "value": "strafe.14a0d96c076c89f2",
             "selected": false
           },
           {
@@ -1335,69 +672,15 @@
             "selected": false
           },
           {
-            "text": "twofa-challenge.14a098f45eaa230a",
-            "value": "twofa-challenge.14a098f45eaa230a",
-            "selected": false
-          },
-          {
-            "text": "twofa-challenge.14a098fafd15b1d4",
-            "value": "twofa-challenge.14a098fafd15b1d4",
-            "selected": false
-          },
-          {
             "text": "twofa-registration",
             "value": "twofa-registration",
             "selected": false
-          },
-          {
-            "text": "twofa-registration.14a098f47f31dc9b",
-            "value": "twofa-registration.14a098f47f31dc9b",
-            "selected": false
-          },
-          {
-            "text": "twofa-registration.14a098fb144bfbc7",
-            "value": "twofa-registration.14a098fb144bfbc7",
-            "selected": false
-          },
-          {
-            "text": "wealth-pipes-account",
-            "value": "wealth-pipes-account",
-            "selected": false
-          },
-          {
-            "text": "wealth-pipes-adviser",
-            "value": "wealth-pipes-adviser",
-            "selected": false
-          },
-          {
-            "text": "wealth-pipes-corpaction",
-            "value": "wealth-pipes-corpaction",
-            "selected": false
-          },
-          {
-            "text": "wealth-pipes-facility",
-            "value": "wealth-pipes-facility",
-            "selected": false
-          },
-          {
-            "text": "wealth-pipes-market",
-            "value": "wealth-pipes-market",
-            "selected": false
-          },
-          {
-            "text": "wealth-pipes-portfolio",
-            "value": "wealth-pipes-portfolio",
-            "selected": false
-          },
-          {
-            "text": "wealth-pipes-watchlists",
-            "value": "wealth-pipes-watchlists",
-            "selected": false
           }
         ],
-        "query": "label_values(appName)",
+        "query": "moonracer_podCount{app=\"moonracer\",kubernetes_namespace=\"ci\",namespace=\"$namespace\"}",
         "refresh": true,
-        "type": "query"
+        "type": "query",
+        "regex": "/appName=\"([^\"]+)\"/"
       }
     ]
   },
