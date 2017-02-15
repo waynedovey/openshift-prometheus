@@ -61,7 +61,7 @@
               "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\"}[5m])) by (service)",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 60
+              "step": 11
             }
           ],
           "timeFrom": null,
@@ -126,7 +126,7 @@
               "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[5m])) by (service)",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 60
+              "step": 11
             }
           ],
           "timeFrom": null,
@@ -208,7 +208,7 @@
               "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\"}[10m])) by (service)",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 60
+              "step": 2
             }
           ],
           "timeFrom": null,
@@ -283,8 +283,8 @@
           "renderer": "flot",
           "scopedVars": {
             "job": {
-              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "text": "sit3",
+              "value": "sit3",
               "selected": true
             }
           },
@@ -297,7 +297,7 @@
               "expr": "sum(60 * rate(pulse_call{status=\"SUCCESS\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 60
+              "step": 11
             }
           ],
           "timeFrom": null,
@@ -355,8 +355,8 @@
           "renderer": "flot",
           "scopedVars": {
             "job": {
-              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "text": "sit3",
+              "value": "sit3",
               "selected": true
             }
           },
@@ -369,7 +369,7 @@
               "expr": "sum(60 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[5m])) by (service)",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 60
+              "step": 11
             }
           ],
           "timeFrom": null,
@@ -389,15 +389,15 @@
         }
       ],
       "repeat": "job",
-      "showTitle": true,
-      "title": "$job",
       "scopedVars": {
         "job": {
-          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "text": "sit3",
+          "value": "sit3",
           "selected": true
         }
-      }
+      },
+      "showTitle": true,
+      "title": "$job"
     },
     {
       "collapse": false,
@@ -444,8 +444,8 @@
           "renderer": "flot",
           "scopedVars": {
             "job": {
-              "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-              "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+              "text": "sit3",
+              "value": "sit3",
               "selected": true
             }
           },
@@ -458,7 +458,7 @@
               "expr": "avg(2 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[2m])) by (service) > avg(10 * rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service) + 2 * stddev(rate(pulse_call{status=\"ERROR\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\", user=\"$user\"}[10m])) by (service)",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 60
+              "step": 2
             }
           ],
           "timeFrom": null,
@@ -478,18 +478,18 @@
         }
       ],
       "repeat": "job",
-      "title": "",
       "scopedVars": {
         "job": {
-          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "text": "sit3",
+          "value": "sit3",
           "selected": true
         }
-      }
+      },
+      "title": ""
     }
   ],
   "time": {
-    "from": "now-6h",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {
@@ -515,7 +515,8 @@
       "2d",
       "7d",
       "30d"
-    ]
+    ],
+    "now": true
   },
   "templating": {
     "list": [
@@ -523,7 +524,8 @@
         "allFormat": "glob",
         "current": {
           "text": "ci",
-          "value": "ci"
+          "value": "ci",
+          "tags": []
         },
         "datasource": null,
         "includeAll": false,
@@ -537,8 +539,8 @@
             "selected": false
           },
           {
-            "text": "chris",
-            "value": "chris",
+            "text": "cfme",
+            "value": "cfme",
             "selected": false
           },
           {
@@ -552,11 +554,6 @@
             "selected": false
           },
           {
-            "text": "connect-sit",
-            "value": "connect-sit",
-            "selected": false
-          },
-          {
             "text": "default",
             "value": "default",
             "selected": false
@@ -567,38 +564,33 @@
             "selected": false
           },
           {
-            "text": "doug2",
-            "value": "doug2",
+            "text": "jason1",
+            "value": "jason1",
             "selected": false
           },
           {
-            "text": "james",
-            "value": "james",
+            "text": "jason2",
+            "value": "jason2",
             "selected": false
           },
           {
-            "text": "jason",
-            "value": "jason",
+            "text": "jcx",
+            "value": "jcx",
             "selected": false
           },
           {
-            "text": "jcx3",
-            "value": "jcx3",
+            "text": "nft",
+            "value": "nft",
             "selected": false
           },
           {
-            "text": "jcx4",
-            "value": "jcx4",
+            "text": "nft3",
+            "value": "nft3",
             "selected": false
           },
           {
-            "text": "jcx5",
-            "value": "jcx5",
-            "selected": false
-          },
-          {
-            "text": "jcx7",
-            "value": "jcx7",
+            "text": "nft4",
+            "value": "nft4",
             "selected": false
           },
           {
@@ -617,23 +609,13 @@
             "selected": false
           },
           {
-            "text": "test-project",
-            "value": "test-project",
+            "text": "shared-services",
+            "value": "shared-services",
             "selected": false
           },
           {
-            "text": "wealth-sit",
-            "value": "wealth-sit",
-            "selected": false
-          },
-          {
-            "text": "wealth-uat",
-            "value": "wealth-uat",
-            "selected": false
-          },
-          {
-            "text": "wow",
-            "value": "wow",
+            "text": "suresh",
+            "value": "suresh",
             "selected": false
           }
         ],
@@ -644,166 +626,47 @@
       {
         "allFormat": "pipe",
         "current": {
-          "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-          "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+          "text": "sit3",
+          "value": "sit3",
           "tags": []
         },
         "datasource": null,
         "includeAll": false,
-        "multi": true,
+        "multi": false,
         "multiFormat": "pipe",
         "name": "job",
         "options": [
           {
-            "text": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
-            "value": "6e3a0830-882e-41d0-a66a-e9e2247c9b7c",
+            "text": "Test Grafana",
+            "value": "Test Grafana",
+            "selected": false
+          },
+          {
+            "text": "WOW - Internal UAT",
+            "value": "WOW - Internal UAT",
+            "selected": false
+          },
+          {
+            "text": "WOW - OAuth",
+            "value": "WOW - OAuth",
+            "selected": false
+          },
+          {
+            "text": "sit3",
+            "value": "sit3",
             "selected": true
-          },
-          {
-            "text": "89212b30-0389-47b2-a1f7-ed21a1519198",
-            "value": "89212b30-0389-47b2-a1f7-ed21a1519198",
-            "selected": false
-          },
-          {
-            "text": "A",
-            "value": "A",
-            "selected": false
-          },
-          {
-            "text": "A new job",
-            "value": "A new job",
-            "selected": false
-          },
-          {
-            "text": "David Openshift job ",
-            "value": "David Openshift job ",
-            "selected": false
-          },
-          {
-            "text": "HI",
-            "value": "HI",
-            "selected": false
-          },
-          {
-            "text": "Hi",
-            "value": "Hi",
-            "selected": false
-          },
-          {
-            "text": "JOB NAME",
-            "value": "JOB NAME",
-            "selected": false
-          },
-          {
-            "text": "Job",
-            "value": "Job",
-            "selected": false
-          },
-          {
-            "text": "Test",
-            "value": "Test",
-            "selected": false
-          },
-          {
-            "text": "Test Job - Compare",
-            "value": "Test Job - Compare",
-            "selected": false
-          },
-          {
-            "text": "Test Job 2",
-            "value": "Test Job 2",
-            "selected": false
-          },
-          {
-            "text": "WOW Apigee",
-            "value": "WOW Apigee",
-            "selected": false
-          },
-          {
-            "text": "WOW Apigee 2 ",
-            "value": "WOW Apigee 2 ",
-            "selected": false
-          },
-          {
-            "text": "WOW Apigee 3",
-            "value": "WOW Apigee 3",
-            "selected": false
-          },
-          {
-            "text": "WOW Apigee job",
-            "value": "WOW Apigee job",
-            "selected": false
-          },
-          {
-            "text": "a new job",
-            "value": "a new job",
-            "selected": false
-          },
-          {
-            "text": "asdfjkl;asjf;l;ljgsjfl;j;jflsjkljskldjf fslf sdafs afad ",
-            "value": "asdfjkl;asjf;l;ljgsjfl;j;jflsjkljskldjf fslf sdafs afad ",
-            "selected": false
-          },
-          {
-            "text": "fsadfsadfda",
-            "value": "fsadfsadfda",
-            "selected": false
-          },
-          {
-            "text": "klfjkdslfjkl",
-            "value": "klfjkdslfjkl",
-            "selected": false
-          },
-          {
-            "text": "new job",
-            "value": "new job",
-            "selected": false
-          },
-          {
-            "text": "sadfasf",
-            "value": "sadfasf",
-            "selected": false
-          },
-          {
-            "text": "sadfdsaf",
-            "value": "sadfdsaf",
-            "selected": false
-          },
-          {
-            "text": "sadfsaf",
-            "value": "sadfsaf",
-            "selected": false
-          },
-          {
-            "text": "test",
-            "value": "test",
-            "selected": false
-          },
-          {
-            "text": "test job 1",
-            "value": "test job 1",
-            "selected": false
-          },
-          {
-            "text": "test22",
-            "value": "test22",
-            "selected": false
-          },
-          {
-            "text": "wow",
-            "value": "wow",
-            "selected": false
           }
         ],
-        "query": "label_values(pulseJob)",
+        "query": "pulse_call{app=\"pulse\", kubernetes_namespace=\"$namespace\"}",
         "refresh": true,
-        "type": "query"
+        "type": "query",
+        "regex": "/pulseJob=\"([^\"]+)\"/"
       },
       {
         "allFormat": "glob",
         "current": {
-          "text": "WOW APIGEE",
-          "value": "WOW APIGEE"
+          "text": "Apigee Ebanking",
+          "value": "Apigee Ebanking"
         },
         "datasource": null,
         "includeAll": false,
@@ -812,60 +675,26 @@
         "name": "backend",
         "options": [
           {
-            "text": "WOW APIGEE",
-            "value": "WOW APIGEE",
+            "text": "Apigee Ebanking",
+            "value": "Apigee Ebanking",
             "selected": true
           },
           {
-            "text": "WOW Apigee",
-            "value": "WOW Apigee",
-            "selected": false
-          },
-          {
-            "text": "fsadfsadf",
-            "value": "fsadfsadf",
-            "selected": false
-          },
-          {
-            "text": "jason",
-            "value": "jason",
-            "selected": false
-          },
-          {
-            "text": "nft",
-            "value": "nft",
-            "selected": false
-          },
-          {
-            "text": "testbackend",
-            "value": "testbackend",
-            "selected": false
-          },
-          {
-            "text": "wow",
-            "value": "wow",
-            "selected": false
-          },
-          {
-            "text": "wow-internal",
-            "value": "wow-internal",
-            "selected": false
-          },
-          {
-            "text": "wow2",
-            "value": "wow2",
+            "text": "Ebanking Sit3 On-prem",
+            "value": "Ebanking Sit3 On-prem",
             "selected": false
           }
         ],
-        "query": "label_values(backend)",
+        "query": "pulse_call{app=\"pulse\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\"}",
         "refresh": true,
-        "type": "query"
+        "type": "query",
+        "regex": "/backend=\"([^\"]+)\"/"
       },
       {
         "allFormat": "glob",
         "current": {
-          "text": "12341234",
-          "value": "12341234"
+          "text": "31479611",
+          "value": "31479611"
         },
         "datasource": null,
         "includeAll": false,
@@ -874,39 +703,15 @@
         "name": "user",
         "options": [
           {
-            "text": "12341234",
-            "value": "12341234",
+            "text": "31479611",
+            "value": "31479611",
             "selected": true
-          },
-          {
-            "text": "12345678",
-            "value": "12345678",
-            "selected": false
-          },
-          {
-            "text": "31176142",
-            "value": "31176142",
-            "selected": false
-          },
-          {
-            "text": "31231232",
-            "value": "31231232",
-            "selected": false
-          },
-          {
-            "text": "33641432",
-            "value": "33641432",
-            "selected": false
-          },
-          {
-            "text": "62836919",
-            "value": "62836919",
-            "selected": false
           }
         ],
-        "query": "label_values(user)",
+        "query": "pulse_call{app=\"pulse\", kubernetes_namespace=\"$namespace\", pulseJob=\"$job\", backend=\"$backend\"}",
         "refresh": true,
-        "type": "query"
+        "type": "query",
+        "regex": "/user=\"([^\"]+)\"/"
       }
     ]
   },
