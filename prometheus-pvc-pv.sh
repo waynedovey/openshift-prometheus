@@ -10,7 +10,7 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 50Gi
+      storage: 10Gi
 API
 
 oc volume dc/prometheus \
