@@ -16,11 +16,8 @@ RUN chown grafana /usr/share/grafana/
 ADD debian-packages /debian-packages
 RUN dpkg -i /debian-packages/*.deb
 
-RUN curl -L https://github.com/hawkular/hawkular-grafana-datasource/archive/release.zip -o hawkular-grafana-datasource-release.zip && \
-    unzip hawkular-grafana-datasource-release.zip && \
-    rm hawkular-grafana-datasource-release.zip && \
-    mkdir -p /var/lib/grafana/plugins/hawkular-datasource && \
-    mv hawkular-grafana-datasource-release /var/lib/grafana/plugins/hawkular-datasource
+RUN mkdir -p /var/lib/grafana/plugins/hawkular-datasource 
+ADD hawkular-datasource /var/lib/grafana/plugins/hawkular-datasource
 
 ADD run.sh /run.sh
 RUN chown grafana /run.sh
