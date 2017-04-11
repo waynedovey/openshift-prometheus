@@ -1,4 +1,4 @@
-FROM grafana/grafana:4.2.0
+FROM grafana/grafana:2.6.0
 MAINTAINER Wayne Dovey <wdovey@redhat.com>
 
 ENTRYPOINT ["/run.sh"]
