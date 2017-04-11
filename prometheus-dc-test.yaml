@@ -52,6 +52,8 @@ spec:
       containers:
       - args:
         - -config.file=/etc/prometheus/config/prometheus.yml
+        - '-query.timeout=5m0s'
+        - '-storage.local.retention=168h0m0s'
         image: prom/prometheus:v1.5.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
