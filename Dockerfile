@@ -1,4 +1,4 @@
-FROM grafana/grafana:master
+FROM grafana/grafana:4.1.2
 MAINTAINER Jimmi Dyson <jimmidyson@gmail.com>
 
 ENTRYPOINT ["/run.sh"]
