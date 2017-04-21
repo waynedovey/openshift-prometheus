@@ -1,4 +1,4 @@
-FROM grafana/grafana:3.1.1
+FROM grafana/grafana:master
 MAINTAINER Jimmi Dyson <jimmidyson@gmail.com>
 
 ENTRYPOINT ["/run.sh"]
@@ -12,12 +12,6 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN chmod 777 /var/lib/grafana /usr/share/grafana/
 RUN chown grafana /var/lib/grafana
 RUN chown grafana /usr/share/grafana/
-
-#ADD curl_7.38.0-4+deb8u4_amd64.deb /curl_7.38.0-4+deb8u4_amd64.deb
-#ADD libcurl3_7.38.0-4+deb8u4_amd64.deb /libcurl3_7.38.0-4+deb8u4_amd64.deb
-#RUN dpkg -i /curl_7.38.0-4+deb8u4_amd64.deb /libcurl3_7.38.0-4+deb8u4_amd64.deb
-#RUN apt-get update
-#RUN apt-get -y --no-install-recommends install libfontconfig curl ca-certificates
 
 ADD debian-packages /debian-packages
 RUN dpkg -i /debian-packages/*.deb
