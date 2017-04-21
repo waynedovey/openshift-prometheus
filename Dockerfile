@@ -22,8 +22,8 @@ RUN chmod 777 /run.sh
 ADD dashboards /dashboards
 RUN chmod 777 /dashboards && chmod 666 /dashboards/*
 
-ADD grafana-kubernetes-app /var/lib/grafana/plugins/grafana-kubernetes-app
-RUN chmod -R 777 /var/lib/grafana/plugins/grafana-kubernetes-app
+ADD grafana-kubernetes-app /usr/share/grafana/public/app/plugins/app/grafana-kubernetes-app
+RUN chmod -R 777 /usr/share/grafana/public/app/plugins/app/grafana-kubernetes-app
 
 #RUN grafana-cli plugins install raintank-kubernetes-app
 
