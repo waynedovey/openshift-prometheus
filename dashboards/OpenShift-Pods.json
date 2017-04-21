@@ -1,0 +1,2032 @@
+{
+  "id": null,
+  "title": "OpenShift - Pods",
+  "originalTitle": "OpenShift - Pods",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "s",
+          "id": 1,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "scopedVars": {
+            "pod": {
+              "text": "blurr-3-nvu5z",
+              "value": "blurr-3-nvu5z",
+              "selected": true
+            }
+          },
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "expr": "time() - max(container_start_time_seconds{job=\"kubernetes-nodes\", kubernetes_namespace=\"$namespace\", kubernetes_pod_name=\"$pod\"})",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 600
+            }
+          ],
+          "thresholds": "",
+          "title": "Uptime",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 15,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "pod": {
+              "text": "blurr-3-nvu5z",
+              "value": "blurr-3-nvu5z",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(container_memory_usage_bytes{job=\"kubernetes-nodes\", kubernetes_namespace=\"$namespace\", kubernetes_pod_name=\"$pod\"})",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "Used",
+              "refId": "A",
+              "step": 60
+            },
+            {
+              "expr": "sum(container_memory_working_set_bytes{job=\"kubernetes-nodes\", kubernetes_namespace=\"$namespace\", kubernetes_pod_name=\"$pod\"})",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "Working",
+              "refId": "B",
+              "step": 60
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory Usage",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "bytes",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 19,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "pod": {
+              "text": "blurr-3-nvu5z",
+              "value": "blurr-3-nvu5z",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 5,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(irate(container_cpu_usage_seconds_total{job=\"kubernetes-nodes\", kubernetes_namespace=\"$namespace\", kubernetes_pod_name=\"$pod\"}[5m]))",
+              "intervalFactor": 2,
+              "legendFormat": "Total",
+              "refId": "A",
+              "step": 60
+            },
+            {
+              "expr": "sum(irate(container_cpu_system_seconds_total{job=\"kubernetes-nodes\", kubernetes_namespace=\"$namespace\", kubernetes_pod_name=\"$pod\"}[5m]))",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "Kernel",
+              "refId": "B",
+              "step": 60
+            },
+            {
+              "expr": "sum(irate(container_cpu_user_seconds_total{job=\"kubernetes-nodes\", kubernetes_namespace=\"$namespace\", kubernetes_pod_name=\"$pod\"}[5m]))",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "User",
+              "refId": "C",
+              "step": 60
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Usage",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "s",
+            "short"
+          ]
+        }
+      ],
+      "repeat": "pod",
+      "scopedVars": {
+        "pod": {
+          "text": "blurr-3-nvu5z",
+          "value": "blurr-3-nvu5z",
+          "selected": true
+        }
+      },
+      "showTitle": true,
+      "title": "$pod"
+    }
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "now": true,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "templating": {
+    "list": [
+      {
+        "allFormat": "glob",
+        "current": {
+          "text": "nft",
+          "value": "nft",
+          "tags": []
+        },
+        "datasource": null,
+        "includeAll": false,
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "namespace",
+        "options": [
+          {
+            "text": "build",
+            "value": "build",
+            "selected": false
+          },
+          {
+            "text": "ci",
+            "value": "ci",
+            "selected": false
+          },
+          {
+            "text": "connect",
+            "value": "connect",
+            "selected": false
+          },
+          {
+            "text": "connect-dev",
+            "value": "connect-dev",
+            "selected": false
+          },
+          {
+            "text": "connect-doug",
+            "value": "connect-doug",
+            "selected": false
+          },
+          {
+            "text": "default",
+            "value": "default",
+            "selected": false
+          },
+          {
+            "text": "doug",
+            "value": "doug",
+            "selected": false
+          },
+          {
+            "text": "doug3",
+            "value": "doug3",
+            "selected": false
+          },
+          {
+            "text": "jason",
+            "value": "jason",
+            "selected": false
+          },
+          {
+            "text": "jason2",
+            "value": "jason2",
+            "selected": false
+          },
+          {
+            "text": "jason3",
+            "value": "jason3",
+            "selected": false
+          },
+          {
+            "text": "jcx",
+            "value": "jcx",
+            "selected": false
+          },
+          {
+            "text": "jcx1",
+            "value": "jcx1",
+            "selected": false
+          },
+          {
+            "text": "nft",
+            "value": "nft",
+            "selected": true
+          },
+          {
+            "text": "openshift",
+            "value": "openshift",
+            "selected": false
+          },
+          {
+            "text": "openshift-infra",
+            "value": "openshift-infra",
+            "selected": false
+          },
+          {
+            "text": "paul",
+            "value": "paul",
+            "selected": false
+          },
+          {
+            "text": "prometheus",
+            "value": "prometheus",
+            "selected": false
+          },
+          {
+            "text": "recipes",
+            "value": "recipes",
+            "selected": false
+          },
+          {
+            "text": "shared-services",
+            "value": "shared-services",
+            "selected": false
+          },
+          {
+            "text": "wow",
+            "value": "wow",
+            "selected": false
+          },
+          {
+            "text": "wow2",
+            "value": "wow2",
+            "selected": false
+          }
+        ],
+        "query": "label_values(kubernetes_namespace)",
+        "refresh": true,
+        "refresh_on_load": true,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "allFormat": "glob",
+        "current": {
+          "text": "blurr-3-nvu5z",
+          "value": "blurr-3-nvu5z"
+        },
+        "datasource": null,
+        "includeAll": false,
+        "multi": true,
+        "multiFormat": "pipe",
+        "name": "pod",
+        "options": [
+          {
+            "text": "blurr-3-nvu5z",
+            "value": "blurr-3-nvu5z",
+            "selected": true
+          },
+          {
+            "text": "blurr-3-ya2oa",
+            "value": "blurr-3-ya2oa",
+            "selected": false
+          },
+          {
+            "text": "blurr-4-5zola",
+            "value": "blurr-4-5zola",
+            "selected": false
+          },
+          {
+            "text": "blurr-4-deploy",
+            "value": "blurr-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "blurr-4-eyeai",
+            "value": "blurr-4-eyeai",
+            "selected": false
+          },
+          {
+            "text": "blurr-5-53elx",
+            "value": "blurr-5-53elx",
+            "selected": false
+          },
+          {
+            "text": "blurr-5-69rmo",
+            "value": "blurr-5-69rmo",
+            "selected": false
+          },
+          {
+            "text": "blurr-5-deploy",
+            "value": "blurr-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-4-deploy",
+            "value": "bumblebee-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-4-jhvyr",
+            "value": "bumblebee-4-jhvyr",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-5-deploy",
+            "value": "bumblebee-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-5-venvg",
+            "value": "bumblebee-5-venvg",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-6-deploy",
+            "value": "bumblebee-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-6-jkwgc",
+            "value": "bumblebee-6-jkwgc",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-7-deploy",
+            "value": "bumblebee-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-7-w9cuz",
+            "value": "bumblebee-7-w9cuz",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-8-deploy",
+            "value": "bumblebee-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "bumblebee-8-y8r3e",
+            "value": "bumblebee-8-y8r3e",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-3-2dw6e",
+            "value": "cashservices-v2-3-2dw6e",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-3-6d0rv",
+            "value": "cashservices-v2-3-6d0rv",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-4-2df91",
+            "value": "cashservices-v2-4-2df91",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-4-deploy",
+            "value": "cashservices-v2-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-4-fhkws",
+            "value": "cashservices-v2-4-fhkws",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-4-tdsk6",
+            "value": "cashservices-v2-4-tdsk6",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-4-xztfs",
+            "value": "cashservices-v2-4-xztfs",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-6-4428d",
+            "value": "cashservices-v2-6-4428d",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-6-deploy",
+            "value": "cashservices-v2-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-6-ra4wn",
+            "value": "cashservices-v2-6-ra4wn",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-7-deploy",
+            "value": "cashservices-v2-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-7-yhtrm",
+            "value": "cashservices-v2-7-yhtrm",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-8-61cwc",
+            "value": "cashservices-v2-8-61cwc",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-8-72py5",
+            "value": "cashservices-v2-8-72py5",
+            "selected": false
+          },
+          {
+            "text": "cashservices-v2-8-deploy",
+            "value": "cashservices-v2-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-1-i95kz",
+            "value": "doubleheader-1-i95kz",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-1-slrft",
+            "value": "doubleheader-1-slrft",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-2-deploy",
+            "value": "doubleheader-2-deploy",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-2-hh3o3",
+            "value": "doubleheader-2-hh3o3",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-2-wnbw1",
+            "value": "doubleheader-2-wnbw1",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-3-deploy",
+            "value": "doubleheader-3-deploy",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-3-i79bn",
+            "value": "doubleheader-3-i79bn",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-3-vn39s",
+            "value": "doubleheader-3-vn39s",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-4-ev08h",
+            "value": "doubleheader-4-ev08h",
+            "selected": false
+          },
+          {
+            "text": "doubleheader-4-uhogp",
+            "value": "doubleheader-4-uhogp",
+            "selected": false
+          },
+          {
+            "text": "kickback-3-7w3tz",
+            "value": "kickback-3-7w3tz",
+            "selected": false
+          },
+          {
+            "text": "kickback-3-aksqp",
+            "value": "kickback-3-aksqp",
+            "selected": false
+          },
+          {
+            "text": "kickback-3-qi7cn",
+            "value": "kickback-3-qi7cn",
+            "selected": false
+          },
+          {
+            "text": "kickback-3-xe2fx",
+            "value": "kickback-3-xe2fx",
+            "selected": false
+          },
+          {
+            "text": "kickback-4-deploy",
+            "value": "kickback-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "kickback-4-kf2nf",
+            "value": "kickback-4-kf2nf",
+            "selected": false
+          },
+          {
+            "text": "kickback-4-n759g",
+            "value": "kickback-4-n759g",
+            "selected": false
+          },
+          {
+            "text": "kickback-5-deploy",
+            "value": "kickback-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "kickback-5-mh2z3",
+            "value": "kickback-5-mh2z3",
+            "selected": false
+          },
+          {
+            "text": "kickback-6-deploy",
+            "value": "kickback-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "kickback-6-j997x",
+            "value": "kickback-6-j997x",
+            "selected": false
+          },
+          {
+            "text": "kickback-6-yp5wt",
+            "value": "kickback-6-yp5wt",
+            "selected": false
+          },
+          {
+            "text": "kickback-7-qdpo9",
+            "value": "kickback-7-qdpo9",
+            "selected": false
+          },
+          {
+            "text": "mindwipe-4-2h5ef",
+            "value": "mindwipe-4-2h5ef",
+            "selected": false
+          },
+          {
+            "text": "mindwipe-4-r50uj",
+            "value": "mindwipe-4-r50uj",
+            "selected": false
+          },
+          {
+            "text": "mindwipe-5-36ggk",
+            "value": "mindwipe-5-36ggk",
+            "selected": false
+          },
+          {
+            "text": "mindwipe-5-6eqvz",
+            "value": "mindwipe-5-6eqvz",
+            "selected": false
+          },
+          {
+            "text": "mindwipe-5-deploy",
+            "value": "mindwipe-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "mindwipe-6-1tfg7",
+            "value": "mindwipe-6-1tfg7",
+            "selected": false
+          },
+          {
+            "text": "mindwipe-6-7u7i0",
+            "value": "mindwipe-6-7u7i0",
+            "selected": false
+          },
+          {
+            "text": "mindwipe-6-deploy",
+            "value": "mindwipe-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "mirage-1-d47hl",
+            "value": "mirage-1-d47hl",
+            "selected": false
+          },
+          {
+            "text": "mirage-1-e9w4p",
+            "value": "mirage-1-e9w4p",
+            "selected": false
+          },
+          {
+            "text": "mirage-2-5tbnn",
+            "value": "mirage-2-5tbnn",
+            "selected": false
+          },
+          {
+            "text": "mirage-2-b1ycr",
+            "value": "mirage-2-b1ycr",
+            "selected": false
+          },
+          {
+            "text": "mirage-2-deploy",
+            "value": "mirage-2-deploy",
+            "selected": false
+          },
+          {
+            "text": "mirage-2-isfat",
+            "value": "mirage-2-isfat",
+            "selected": false
+          },
+          {
+            "text": "mirage-3-9hvuo",
+            "value": "mirage-3-9hvuo",
+            "selected": false
+          },
+          {
+            "text": "mirage-3-cjtvc",
+            "value": "mirage-3-cjtvc",
+            "selected": false
+          },
+          {
+            "text": "mirage-3-deploy",
+            "value": "mirage-3-deploy",
+            "selected": false
+          },
+          {
+            "text": "mirage-4-deploy",
+            "value": "mirage-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "mirage-4-mamyu",
+            "value": "mirage-4-mamyu",
+            "selected": false
+          },
+          {
+            "text": "mirage-4-zm45p",
+            "value": "mirage-4-zm45p",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices-1-x8osf",
+            "value": "mortgageservices-1-x8osf",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices-1-yd3bb",
+            "value": "mortgageservices-1-yd3bb",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices-2-77orr",
+            "value": "mortgageservices-2-77orr",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices-2-deploy",
+            "value": "mortgageservices-2-deploy",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices-2-r4kl4",
+            "value": "mortgageservices-2-r4kl4",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices-4-c2gth",
+            "value": "mortgageservices-4-c2gth",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices-4-deploy",
+            "value": "mortgageservices-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "mortgageservices-4-oy7gv",
+            "value": "mortgageservices-4-oy7gv",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-13-5ib60",
+            "value": "pipes-account-13-5ib60",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-13-deploy",
+            "value": "pipes-account-13-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-13-y5gio",
+            "value": "pipes-account-13-y5gio",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-14-deploy",
+            "value": "pipes-account-14-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-14-g5iaj",
+            "value": "pipes-account-14-g5iaj",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-14-km4im",
+            "value": "pipes-account-14-km4im",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-15-deploy",
+            "value": "pipes-account-15-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-15-ubtwm",
+            "value": "pipes-account-15-ubtwm",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-15-w6oev",
+            "value": "pipes-account-15-w6oev",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-16-d9epj",
+            "value": "pipes-account-16-d9epj",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-16-deploy",
+            "value": "pipes-account-16-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-16-tyqah",
+            "value": "pipes-account-16-tyqah",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-17-7sh2n",
+            "value": "pipes-account-17-7sh2n",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-17-deploy",
+            "value": "pipes-account-17-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-17-qj1wy",
+            "value": "pipes-account-17-qj1wy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-18-1c051",
+            "value": "pipes-account-18-1c051",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-18-deploy",
+            "value": "pipes-account-18-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-18-zxsss",
+            "value": "pipes-account-18-zxsss",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-19-deploy",
+            "value": "pipes-account-19-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-19-k3173",
+            "value": "pipes-account-19-k3173",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-19-qhux1",
+            "value": "pipes-account-19-qhux1",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-20-deploy",
+            "value": "pipes-account-20-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-20-edmkj",
+            "value": "pipes-account-20-edmkj",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-20-xbyom",
+            "value": "pipes-account-20-xbyom",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-21-68k5z",
+            "value": "pipes-account-21-68k5z",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-21-deploy",
+            "value": "pipes-account-21-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-21-z5s14",
+            "value": "pipes-account-21-z5s14",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-22-7d95o",
+            "value": "pipes-account-22-7d95o",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-22-deploy",
+            "value": "pipes-account-22-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-22-gyhnp",
+            "value": "pipes-account-22-gyhnp",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-22-h0mn7",
+            "value": "pipes-account-22-h0mn7",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-22-osma8",
+            "value": "pipes-account-22-osma8",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-23-37u6s",
+            "value": "pipes-account-23-37u6s",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-23-8ftns",
+            "value": "pipes-account-23-8ftns",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-23-deploy",
+            "value": "pipes-account-23-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-25-6myu0",
+            "value": "pipes-account-25-6myu0",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-25-deploy",
+            "value": "pipes-account-25-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-25-m3zb8",
+            "value": "pipes-account-25-m3zb8",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-25-q91ez",
+            "value": "pipes-account-25-q91ez",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-4-485d8",
+            "value": "pipes-account-4-485d8",
+            "selected": false
+          },
+          {
+            "text": "pipes-account-4-fv8os",
+            "value": "pipes-account-4-fv8os",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-4-8jxqd",
+            "value": "pipes-home-4-8jxqd",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-4-oe229",
+            "value": "pipes-home-4-oe229",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-4-pw20f",
+            "value": "pipes-home-4-pw20f",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-4-v7fmx",
+            "value": "pipes-home-4-v7fmx",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-5-4jb0b",
+            "value": "pipes-home-5-4jb0b",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-5-deploy",
+            "value": "pipes-home-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-6-53uk2",
+            "value": "pipes-home-6-53uk2",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-6-deploy",
+            "value": "pipes-home-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-7-3chw2",
+            "value": "pipes-home-7-3chw2",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-7-deploy",
+            "value": "pipes-home-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-7-in89t",
+            "value": "pipes-home-7-in89t",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-8-56us2",
+            "value": "pipes-home-8-56us2",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-8-deploy",
+            "value": "pipes-home-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-8-hq1gk",
+            "value": "pipes-home-8-hq1gk",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-8-t08ta",
+            "value": "pipes-home-8-t08ta",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-9-deploy",
+            "value": "pipes-home-9-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-home-9-n0533",
+            "value": "pipes-home-9-n0533",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-5-deploy",
+            "value": "pipes-payee-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-5-j521f",
+            "value": "pipes-payee-5-j521f",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-5-o3mjy",
+            "value": "pipes-payee-5-o3mjy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-6-16rs0",
+            "value": "pipes-payee-6-16rs0",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-6-deploy",
+            "value": "pipes-payee-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-6-oid9u",
+            "value": "pipes-payee-6-oid9u",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-7-9dw56",
+            "value": "pipes-payee-7-9dw56",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-7-deploy",
+            "value": "pipes-payee-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-7-pv79m",
+            "value": "pipes-payee-7-pv79m",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-8-aaqx2",
+            "value": "pipes-payee-8-aaqx2",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-8-deploy",
+            "value": "pipes-payee-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payee-8-s3m5t",
+            "value": "pipes-payee-8-s3m5t",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-10-8vpha",
+            "value": "pipes-payment-10-8vpha",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-10-deploy",
+            "value": "pipes-payment-10-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-11-deploy",
+            "value": "pipes-payment-11-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-11-urrsy",
+            "value": "pipes-payment-11-urrsy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-11-zv4n9",
+            "value": "pipes-payment-11-zv4n9",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-12-deploy",
+            "value": "pipes-payment-12-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-12-iyylm",
+            "value": "pipes-payment-12-iyylm",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-12-tasic",
+            "value": "pipes-payment-12-tasic",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-14-deploy",
+            "value": "pipes-payment-14-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-14-slbuo",
+            "value": "pipes-payment-14-slbuo",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-8-csqwl",
+            "value": "pipes-payment-8-csqwl",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-8-deploy",
+            "value": "pipes-payment-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-9-5x7wk",
+            "value": "pipes-payment-9-5x7wk",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-9-deploy",
+            "value": "pipes-payment-9-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-9-dxqtk",
+            "value": "pipes-payment-9-dxqtk",
+            "selected": false
+          },
+          {
+            "text": "pipes-payment-9-xdk9m",
+            "value": "pipes-payment-9-xdk9m",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-4-2tza5",
+            "value": "pipes-quickview-4-2tza5",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-4-dwr7x",
+            "value": "pipes-quickview-4-dwr7x",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-4-q8r2k",
+            "value": "pipes-quickview-4-q8r2k",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-5-deploy",
+            "value": "pipes-quickview-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-5-o29dr",
+            "value": "pipes-quickview-5-o29dr",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-6-d4fsv",
+            "value": "pipes-quickview-6-d4fsv",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-6-deploy",
+            "value": "pipes-quickview-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-6-qnw4l",
+            "value": "pipes-quickview-6-qnw4l",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-7-b2ngw",
+            "value": "pipes-quickview-7-b2ngw",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-7-deploy",
+            "value": "pipes-quickview-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-quickview-7-ng7ts",
+            "value": "pipes-quickview-7-ng7ts",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-5-deploy",
+            "value": "pipes-statement-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-5-fom1l",
+            "value": "pipes-statement-5-fom1l",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-5-r6b9d",
+            "value": "pipes-statement-5-r6b9d",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-6-cwq81",
+            "value": "pipes-statement-6-cwq81",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-6-deploy",
+            "value": "pipes-statement-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-6-ots3s",
+            "value": "pipes-statement-6-ots3s",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-7-8246e",
+            "value": "pipes-statement-7-8246e",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-7-deploy",
+            "value": "pipes-statement-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-7-qj6cs",
+            "value": "pipes-statement-7-qj6cs",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-8-3smmj",
+            "value": "pipes-statement-8-3smmj",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-8-bplz0",
+            "value": "pipes-statement-8-bplz0",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-8-deploy",
+            "value": "pipes-statement-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-9-03c3p",
+            "value": "pipes-statement-9-03c3p",
+            "selected": false
+          },
+          {
+            "text": "pipes-statement-9-u6gzl",
+            "value": "pipes-statement-9-u6gzl",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-5-3lrjg",
+            "value": "pipes-transaction-5-3lrjg",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-5-avyto",
+            "value": "pipes-transaction-5-avyto",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-5-deploy",
+            "value": "pipes-transaction-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-6-bki83",
+            "value": "pipes-transaction-6-bki83",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-6-cuzr6",
+            "value": "pipes-transaction-6-cuzr6",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-6-deploy",
+            "value": "pipes-transaction-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-7-5m00i",
+            "value": "pipes-transaction-7-5m00i",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-7-deploy",
+            "value": "pipes-transaction-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-7-hd0sd",
+            "value": "pipes-transaction-7-hd0sd",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-8-deploy",
+            "value": "pipes-transaction-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-8-lptt7",
+            "value": "pipes-transaction-8-lptt7",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-8-r14rv",
+            "value": "pipes-transaction-8-r14rv",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-9-deploy",
+            "value": "pipes-transaction-9-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-9-m4o7p",
+            "value": "pipes-transaction-9-m4o7p",
+            "selected": false
+          },
+          {
+            "text": "pipes-transaction-9-o2tbr",
+            "value": "pipes-transaction-9-o2tbr",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-10-pxdfe",
+            "value": "pipes-user-10-pxdfe",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-5-01dlu",
+            "value": "pipes-user-5-01dlu",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-5-deploy",
+            "value": "pipes-user-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-5-ycvje",
+            "value": "pipes-user-5-ycvje",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-6-8g18v",
+            "value": "pipes-user-6-8g18v",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-6-au316",
+            "value": "pipes-user-6-au316",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-6-deploy",
+            "value": "pipes-user-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-6-vvw12",
+            "value": "pipes-user-6-vvw12",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-7-7kclo",
+            "value": "pipes-user-7-7kclo",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-7-deploy",
+            "value": "pipes-user-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-8-0jdpp",
+            "value": "pipes-user-8-0jdpp",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-8-50x0c",
+            "value": "pipes-user-8-50x0c",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-8-deploy",
+            "value": "pipes-user-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-9-deploy",
+            "value": "pipes-user-9-deploy",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-9-w5b7s",
+            "value": "pipes-user-9-w5b7s",
+            "selected": false
+          },
+          {
+            "text": "pipes-user-9-y9ydd",
+            "value": "pipes-user-9-y9ydd",
+            "selected": false
+          },
+          {
+            "text": "punch-1-4do9z",
+            "value": "punch-1-4do9z",
+            "selected": false
+          },
+          {
+            "text": "punch-1-sfh88",
+            "value": "punch-1-sfh88",
+            "selected": false
+          },
+          {
+            "text": "punch-2-deploy",
+            "value": "punch-2-deploy",
+            "selected": false
+          },
+          {
+            "text": "punch-2-e9s9s",
+            "value": "punch-2-e9s9s",
+            "selected": false
+          },
+          {
+            "text": "punch-2-mrg6f",
+            "value": "punch-2-mrg6f",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-1-2hbsr",
+            "value": "rtg-mediator-1-2hbsr",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-1-rfw69",
+            "value": "rtg-mediator-1-rfw69",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-2-5s9hn",
+            "value": "rtg-mediator-2-5s9hn",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-2-6q9de",
+            "value": "rtg-mediator-2-6q9de",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-2-deploy",
+            "value": "rtg-mediator-2-deploy",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-2-k773e",
+            "value": "rtg-mediator-2-k773e",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-2-yk3mt",
+            "value": "rtg-mediator-2-yk3mt",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-4-50g6g",
+            "value": "rtg-mediator-4-50g6g",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-4-deploy",
+            "value": "rtg-mediator-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-5-ctu1l",
+            "value": "rtg-mediator-5-ctu1l",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-5-deploy",
+            "value": "rtg-mediator-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-6-deploy",
+            "value": "rtg-mediator-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-6-txmaw",
+            "value": "rtg-mediator-6-txmaw",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-7-af6px",
+            "value": "rtg-mediator-7-af6px",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-7-deploy",
+            "value": "rtg-mediator-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "rtg-mediator-7-o33z4",
+            "value": "rtg-mediator-7-o33z4",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-3-93pbz",
+            "value": "sapm-proxy-3-93pbz",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-3-u4775",
+            "value": "sapm-proxy-3-u4775",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-3-xicr8",
+            "value": "sapm-proxy-3-xicr8",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-4-13pl4",
+            "value": "sapm-proxy-4-13pl4",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-4-deploy",
+            "value": "sapm-proxy-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-4-z3a09",
+            "value": "sapm-proxy-4-z3a09",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-5-deploy",
+            "value": "sapm-proxy-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-5-h48pz",
+            "value": "sapm-proxy-5-h48pz",
+            "selected": false
+          },
+          {
+            "text": "sapm-proxy-5-wdso7",
+            "value": "sapm-proxy-5-wdso7",
+            "selected": false
+          },
+          {
+            "text": "sideways-1-10064",
+            "value": "sideways-1-10064",
+            "selected": false
+          },
+          {
+            "text": "sideways-1-i05lj",
+            "value": "sideways-1-i05lj",
+            "selected": false
+          },
+          {
+            "text": "sideways-2-3mmh7",
+            "value": "sideways-2-3mmh7",
+            "selected": false
+          },
+          {
+            "text": "sideways-2-deploy",
+            "value": "sideways-2-deploy",
+            "selected": false
+          },
+          {
+            "text": "sideways-2-fkoqx",
+            "value": "sideways-2-fkoqx",
+            "selected": false
+          },
+          {
+            "text": "sideways-2-lvom9",
+            "value": "sideways-2-lvom9",
+            "selected": false
+          },
+          {
+            "text": "sideways-3-deploy",
+            "value": "sideways-3-deploy",
+            "selected": false
+          },
+          {
+            "text": "sideways-3-mfcbi",
+            "value": "sideways-3-mfcbi",
+            "selected": false
+          },
+          {
+            "text": "starscream-3-qqmgk",
+            "value": "starscream-3-qqmgk",
+            "selected": false
+          },
+          {
+            "text": "starscream-3-rwnqh",
+            "value": "starscream-3-rwnqh",
+            "selected": false
+          },
+          {
+            "text": "starscream-4-2smai",
+            "value": "starscream-4-2smai",
+            "selected": false
+          },
+          {
+            "text": "starscream-4-3tpqf",
+            "value": "starscream-4-3tpqf",
+            "selected": false
+          },
+          {
+            "text": "starscream-4-deploy",
+            "value": "starscream-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "starscream-4-dz2gb",
+            "value": "starscream-4-dz2gb",
+            "selected": false
+          },
+          {
+            "text": "starscream-4-jgzc0",
+            "value": "starscream-4-jgzc0",
+            "selected": false
+          },
+          {
+            "text": "starscream-4-uh9pv",
+            "value": "starscream-4-uh9pv",
+            "selected": false
+          },
+          {
+            "text": "starscream-5-9mcjm",
+            "value": "starscream-5-9mcjm",
+            "selected": false
+          },
+          {
+            "text": "starscream-5-deploy",
+            "value": "starscream-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "starscream-6-7pvum",
+            "value": "starscream-6-7pvum",
+            "selected": false
+          },
+          {
+            "text": "starscream-6-deploy",
+            "value": "starscream-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "starscream-6-lr976",
+            "value": "starscream-6-lr976",
+            "selected": false
+          },
+          {
+            "text": "strafe-2-cyqcx",
+            "value": "strafe-2-cyqcx",
+            "selected": false
+          },
+          {
+            "text": "strafe-2-h27pf",
+            "value": "strafe-2-h27pf",
+            "selected": false
+          },
+          {
+            "text": "strafe-3-deploy",
+            "value": "strafe-3-deploy",
+            "selected": false
+          },
+          {
+            "text": "strafe-3-eivwy",
+            "value": "strafe-3-eivwy",
+            "selected": false
+          },
+          {
+            "text": "strafe-3-hv9ul",
+            "value": "strafe-3-hv9ul",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-1-0x7po",
+            "value": "twofa-challenge-1-0x7po",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-1-o3czc",
+            "value": "twofa-challenge-1-o3czc",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-10-deploy",
+            "value": "twofa-challenge-10-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-10-ib6zc",
+            "value": "twofa-challenge-10-ib6zc",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-10-u0vfr",
+            "value": "twofa-challenge-10-u0vfr",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-5-bf50i",
+            "value": "twofa-challenge-5-bf50i",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-5-deploy",
+            "value": "twofa-challenge-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-6-6b1hw",
+            "value": "twofa-challenge-6-6b1hw",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-6-9l3ww",
+            "value": "twofa-challenge-6-9l3ww",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-6-deploy",
+            "value": "twofa-challenge-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-6-ej7ki",
+            "value": "twofa-challenge-6-ej7ki",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-6-pqnnj",
+            "value": "twofa-challenge-6-pqnnj",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-7-deploy",
+            "value": "twofa-challenge-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-7-xw0rv",
+            "value": "twofa-challenge-7-xw0rv",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-8-deploy",
+            "value": "twofa-challenge-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-8-rs91l",
+            "value": "twofa-challenge-8-rs91l",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-9-deploy",
+            "value": "twofa-challenge-9-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-challenge-9-z17y5",
+            "value": "twofa-challenge-9-z17y5",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-1-4t9t6",
+            "value": "twofa-registration-1-4t9t6",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-1-dnzzq",
+            "value": "twofa-registration-1-dnzzq",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-4-3r76h",
+            "value": "twofa-registration-4-3r76h",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-4-8owfb",
+            "value": "twofa-registration-4-8owfb",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-4-deploy",
+            "value": "twofa-registration-4-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-4-mak6x",
+            "value": "twofa-registration-4-mak6x",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-4-xs8wn",
+            "value": "twofa-registration-4-xs8wn",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-5-deploy",
+            "value": "twofa-registration-5-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-5-m8j77",
+            "value": "twofa-registration-5-m8j77",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-6-deploy",
+            "value": "twofa-registration-6-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-6-tibfh",
+            "value": "twofa-registration-6-tibfh",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-7-atvmu",
+            "value": "twofa-registration-7-atvmu",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-7-deploy",
+            "value": "twofa-registration-7-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-8-deploy",
+            "value": "twofa-registration-8-deploy",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-8-q79hs",
+            "value": "twofa-registration-8-q79hs",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-8-rwb1c",
+            "value": "twofa-registration-8-rwb1c",
+            "selected": false
+          },
+          {
+            "text": "twofa-registration-9-ni1aq",
+            "value": "twofa-registration-9-ni1aq",
+            "selected": false
+          }
+        ],
+        "query": "container_start_time_seconds{kubernetes_namespace=\"$namespace\"}",
+        "refresh": true,
+        "refresh_on_load": true,
+        "regex": "/pod_name=\"([^\"]+)\"/",
+        "type": "query"
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "schemaVersion": 8,
+  "version": 0,
+  "links": []
+}
