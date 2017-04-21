@@ -18,7 +18,7 @@
       "panels": [
         {
           "cacheTimeout": null,
-          "colorBackground": true,
+          "colorBackground": false,
           "colorValue": false,
           "colors": [
             "rgba(50, 172, 45, 0.97)",
@@ -97,7 +97,7 @@
         },
         {
           "cacheTimeout": null,
-          "colorBackground": true,
+          "colorBackground": false,
           "colorValue": false,
           "colors": [
             "rgba(50, 172, 45, 0.97)",
