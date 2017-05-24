@@ -1,5 +1,5 @@
-FROM grafana/grafana:master
-MAINTAINER Jimmi Dyson <jimmidyson@gmail.com>
+FROM grafana/grafana:4.2.0
+MAINTAINER Wayne Dovey wdovey@redhat.com
 
 ENTRYPOINT ["/run.sh"]
 
