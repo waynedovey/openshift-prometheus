@@ -340,39 +340,6 @@
           "valueName": "current"
         },
         {
-          "alert": {
-            "conditions": [
-              {
-                "evaluator": {
-                  "params": [
-                    90
-                  ],
-                  "type": "gt"
-                },
-                "operator": {
-                  "type": "and"
-                },
-                "query": {
-                  "params": [
-                    "A",
-                    "5m",
-                    "now"
-                  ]
-                },
-                "reducer": {
-                  "params": [],
-                  "type": "avg"
-                },
-                "type": "query"
-              }
-            ],
-            "executionErrorState": "alerting",
-            "frequency": "60s",
-            "handler": 1,
-            "name": "Memory by Node alert",
-            "noDataState": "no_data",
-            "notifications": []
-          },
           "aliasColors": {},
           "bars": false,
           "dashLength": 10,
@@ -400,7 +367,7 @@
           "lines": true,
           "linewidth": 2,
           "links": [],
-          "nullPointMode": "connected",
+          "nullPointMode": "null",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -417,7 +384,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [
@@ -464,39 +431,6 @@
           ]
         },
         {
-          "alert": {
-            "conditions": [
-              {
-                "evaluator": {
-                  "params": [
-                    90
-                  ],
-                  "type": "gt"
-                },
-                "operator": {
-                  "type": "and"
-                },
-                "query": {
-                  "params": [
-                    "A",
-                    "5m",
-                    "now"
-                  ]
-                },
-                "reducer": {
-                  "params": [],
-                  "type": "avg"
-                },
-                "type": "query"
-              }
-            ],
-            "executionErrorState": "alerting",
-            "frequency": "60s",
-            "handler": 1,
-            "name": "CPU by Node alert",
-            "noDataState": "no_data",
-            "notifications": []
-          },
           "aliasColors": {},
           "bars": false,
           "dashLength": 10,
@@ -522,7 +456,7 @@
           "lines": true,
           "linewidth": 2,
           "links": [],
-          "nullPointMode": "connected",
+          "nullPointMode": "null",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -540,7 +474,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [
@@ -588,39 +522,6 @@
           ]
         },
         {
-          "alert": {
-            "conditions": [
-              {
-                "evaluator": {
-                  "params": [
-                    90
-                  ],
-                  "type": "gt"
-                },
-                "operator": {
-                  "type": "and"
-                },
-                "query": {
-                  "params": [
-                    "A",
-                    "5m",
-                    "now"
-                  ]
-                },
-                "reducer": {
-                  "params": [],
-                  "type": "avg"
-                },
-                "type": "query"
-              }
-            ],
-            "executionErrorState": "alerting",
-            "frequency": "60s",
-            "handler": 1,
-            "name": "Cluster Disk Usage alert",
-            "noDataState": "no_data",
-            "notifications": []
-          },
           "aliasColors": {},
           "bars": false,
           "dashLength": 10,
@@ -645,7 +546,7 @@
           "lines": true,
           "linewidth": 2,
           "links": [],
-          "nullPointMode": "connected",
+          "nullPointMode": "null",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -662,7 +563,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [
@@ -709,39 +610,6 @@
           ]
         },
         {
-          "alert": {
-            "conditions": [
-              {
-                "evaluator": {
-                  "params": [
-                    70
-                  ],
-                  "type": "gt"
-                },
-                "operator": {
-                  "type": "and"
-                },
-                "query": {
-                  "params": [
-                    "A",
-                    "5m",
-                    "now"
-                  ]
-                },
-                "reducer": {
-                  "params": [],
-                  "type": "avg"
-                },
-                "type": "query"
-              }
-            ],
-            "executionErrorState": "alerting",
-            "frequency": "60s",
-            "handler": 1,
-            "name": "Pod Count by Node alert",
-            "noDataState": "no_data",
-            "notifications": []
-          },
           "aliasColors": {},
           "bars": false,
           "dashLength": 10,
@@ -769,7 +637,7 @@
           "lines": true,
           "linewidth": 2,
           "links": [],
-          "nullPointMode": "connected",
+          "nullPointMode": "null",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -786,7 +654,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [
@@ -860,7 +728,7 @@
           "lines": true,
           "linewidth": 2,
           "links": [],
-          "nullPointMode": "connected",
+          "nullPointMode": "null",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -883,7 +751,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -949,7 +817,7 @@
           "lines": true,
           "linewidth": 2,
           "links": [],
-          "nullPointMode": "connected",
+          "nullPointMode": "null",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -972,7 +840,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -1055,7 +923,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -1138,7 +1006,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -1175,6 +1043,184 @@
               "show": false
             }
           ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {},
+          "height": "300",
+          "id": 76,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "hideEmpty": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "{}",
+              "lines": false,
+              "yaxis": 2
+            }
+          ],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(container_memory_usage_bytes{job=\"kubernetes-nodes\", id!=\"/\"}) by (kubernetes_namespace, kubernetes_pod_name)",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory by Pod",
+          "tooltip": {
+            "shared": true,
+            "sort": 2,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "bytes",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "bytes",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {},
+          "height": "300",
+          "id": 77,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "hideEmpty": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "{}",
+              "lines": false,
+              "yaxis": 2
+            }
+          ],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(container_cpu_usage_seconds_total) by (kubernetes_namespace,kubernetes_pod_name) / 1000",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU by Pod",
+          "tooltip": {
+            "shared": true,
+            "sort": 2,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "none",
+              "label": "",
+              "logBase": 1,
+              "max": null,
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "none",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ]
         }
       ],
       "repeat": null,
@@ -1185,7 +1231,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": "250px",
       "panels": [
         {
@@ -1224,8 +1270,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "infra0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "infra0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "infra0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "infra0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -1311,8 +1357,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "infra0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "infra0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "infra0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "infra0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -1397,8 +1443,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "infra0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "infra0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "infra0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "infra0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -1503,8 +1549,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "infra0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "infra0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "infra0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "infra0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -1585,8 +1631,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "infra1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "infra1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "infra1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "infra1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -1602,7 +1648,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -1673,8 +1719,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "infra1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "infra1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "infra1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "infra1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -1689,7 +1735,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -1758,8 +1804,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "infra1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "infra1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "infra1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "infra1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -1773,7 +1819,7 @@
               "format": "time_series",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -1862,8 +1908,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "infra1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "infra1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "infra1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "infra1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -1897,7 +1943,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -1943,8 +1989,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -1960,7 +2006,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2031,8 +2077,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -2047,7 +2093,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2116,8 +2162,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -2132,7 +2178,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2221,8 +2267,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -2256,7 +2302,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -2302,8 +2348,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -2319,7 +2365,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2390,8 +2436,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -2406,7 +2452,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2475,8 +2521,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -2491,7 +2537,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2580,8 +2626,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -2615,7 +2661,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -2661,8 +2707,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -2678,7 +2724,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2749,8 +2795,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -2765,7 +2811,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2834,8 +2880,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -2850,7 +2896,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -2939,8 +2985,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "master2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "master2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "master2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "master2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -2974,7 +3020,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -3020,8 +3066,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3037,7 +3083,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -3108,8 +3154,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3124,7 +3170,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -3193,8 +3239,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3209,7 +3255,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -3298,8 +3344,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node0.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node0.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -3333,7 +3379,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -3379,8 +3425,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3396,7 +3442,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -3467,8 +3513,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3483,7 +3529,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -3552,8 +3598,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3567,7 +3613,7 @@
               "format": "time_series",
               "intervalFactor": 2,
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -3656,8 +3702,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node1.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node1.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -3691,7 +3737,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -3737,8 +3783,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3754,7 +3800,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -3825,8 +3871,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3841,7 +3887,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -3910,8 +3956,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -3926,7 +3972,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4015,8 +4061,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node2.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node2.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -4050,7 +4096,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -4096,8 +4142,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node3.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node3.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node3.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node3.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -4113,7 +4159,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4184,8 +4230,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node3.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node3.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node3.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node3.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -4200,7 +4246,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4269,8 +4315,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node3.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node3.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node3.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node3.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -4285,7 +4331,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4374,8 +4420,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node3.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node3.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node3.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node3.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -4409,7 +4455,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -4455,8 +4501,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node4.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node4.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node4.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node4.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -4472,7 +4518,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4543,8 +4589,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node4.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node4.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node4.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node4.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -4559,7 +4605,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4628,8 +4674,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node4.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node4.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node4.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node4.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -4644,7 +4690,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4733,8 +4779,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node4.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node4.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node4.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node4.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -4768,7 +4814,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -4814,8 +4860,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node5.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node5.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node5.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node5.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -4831,7 +4877,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4902,8 +4948,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node5.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node5.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node5.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node5.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -4918,7 +4964,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -4987,8 +5033,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node5.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node5.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node5.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node5.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -5003,7 +5049,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -5092,8 +5138,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node5.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node5.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node5.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node5.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -5127,7 +5173,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -5173,8 +5219,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node6.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node6.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node6.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node6.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -5190,7 +5236,7 @@
               "intervalFactor": 2,
               "legendFormat": "Total",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -5261,8 +5307,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node6.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node6.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node6.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node6.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -5278,7 +5324,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -5347,8 +5393,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node6.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node6.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node6.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node6.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "seriesOverrides": [],
@@ -5363,7 +5409,7 @@
               "intervalFactor": 2,
               "legendFormat": "",
               "refId": "A",
-              "step": 20
+              "step": 10
             }
           ],
           "thresholds": [],
@@ -5452,8 +5498,8 @@
           "scopedVars": {
             "node": {
               "selected": false,
-              "text": "node6.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
-              "value": "node6.test-1.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+              "text": "node6.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node6.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
             }
           },
           "span": 3,
@@ -5487,7 +5533,1090 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1495075150840,
+      "repeatIteration": 1496902842521,
+      "repeatRowId": 2,
+      "showTitle": true,
+      "title": "$node",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 64,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": true,
+            "hideEmpty": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node7.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node7.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(container_memory_usage_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"})  / sum(machine_memory_bytes{job=\"kubernetes-nodes\", instance=~\"$node\"} ) * 100",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "",
+              "logBase": 1,
+              "max": "100",
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "none",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 65,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node7.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node7.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "100 * scalar(sum(irate(container_cpu_usage_seconds_total{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}[5m]))) / machine_cpu_cores{job=\"kubernetes-nodes\", instance=~\"$node\"}",
+              "format": "time_series",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Used",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": 100,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 66,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node7.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node7.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "container_fs_usage_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"} / container_fs_limit_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}  * 100\n",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Disk Usage",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "",
+              "logBase": 1,
+              "max": "100",
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 67,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node7.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node7.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "time() - container_start_time_seconds{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 60
+            }
+          ],
+          "thresholds": "",
+          "title": "Uptime",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": 1496902842521,
+      "repeatRowId": 2,
+      "showTitle": true,
+      "title": "$node",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 68,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": true,
+            "hideEmpty": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node8.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node8.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(container_memory_usage_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"})  / sum(machine_memory_bytes{job=\"kubernetes-nodes\", instance=~\"$node\"} ) * 100",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "",
+              "logBase": 1,
+              "max": "100",
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "none",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 69,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node8.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node8.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "100 * scalar(sum(irate(container_cpu_usage_seconds_total{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}[5m]))) / machine_cpu_cores{job=\"kubernetes-nodes\", instance=~\"$node\"}",
+              "format": "time_series",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Used",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": 100,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 70,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node8.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node8.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "container_fs_usage_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"} / container_fs_limit_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}  * 100\n",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Disk Usage",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "",
+              "logBase": 1,
+              "max": "100",
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 71,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node8.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node8.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "time() - container_start_time_seconds{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 60
+            }
+          ],
+          "thresholds": "",
+          "title": "Uptime",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": 1496902842521,
+      "repeatRowId": 2,
+      "showTitle": true,
+      "title": "$node",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 72,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": true,
+            "hideEmpty": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node9.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node9.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "sum(container_memory_usage_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"})  / sum(machine_memory_bytes{job=\"kubernetes-nodes\", instance=~\"$node\"} ) * 100",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Memory",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "",
+              "logBase": 1,
+              "max": "100",
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "none",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 73,
+          "legend": {
+            "alignAsTable": false,
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "rightSide": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node9.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node9.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "100 * scalar(sum(irate(container_cpu_usage_seconds_total{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}[5m]))) / machine_cpu_cores{job=\"kubernetes-nodes\", instance=~\"$node\"}",
+              "format": "time_series",
+              "interval": "",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Used",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": 100,
+              "min": 0,
+              "show": true
+            },
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": null,
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {},
+          "id": 74,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node9.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node9.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "seriesOverrides": [],
+          "spaceLength": 10,
+          "span": 3,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "expr": "container_fs_usage_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"} / container_fs_limit_bytes{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}  * 100\n",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "legendFormat": "",
+              "refId": "A",
+              "step": 10
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Disk Usage",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "",
+              "logBase": 1,
+              "max": "100",
+              "min": "0",
+              "show": true
+            },
+            {
+              "format": "percent",
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": null,
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "s",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 75,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "scopedVars": {
+            "node": {
+              "selected": false,
+              "text": "node9.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com",
+              "value": "node9.test-13.ocp.bfsonlinebanking.syd.non.c1.macquarie.com"
+            }
+          },
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "expr": "time() - container_start_time_seconds{job=\"kubernetes-nodes\", id=\"/\", instance=~\"$node\"}",
+              "format": "time_series",
+              "intervalFactor": 2,
+              "refId": "A",
+              "step": 60
+            }
+          ],
+          "thresholds": "",
+          "title": "Uptime",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "avg"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": 1496902842521,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -5550,5 +6679,5 @@
   },
   "timezone": "browser",
   "title": "OpenShift - Cluster",
-  "version": 2
+  "version": 8
 }
