@@ -1,5 +1,6 @@
 #!/bin/bash
-oadm new-project prometheus --node-selector="region=infra"
+#oc adm new-project prometheus --node-selector="region=infra"
+oc adm new-project prometheus 
 oc project prometheus 
 sleep 5
 
