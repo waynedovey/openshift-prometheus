@@ -2,6 +2,7 @@
   "annotations": {
     "list": []
   },
+  "description": "Metrics for local test  Origin Cluster",
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
@@ -1777,7 +1778,7 @@
         }
       ],
       "repeat": null,
-      "repeatIteration": 1496963077420,
+      "repeatIteration": 1496965731312,
       "repeatRowId": 2,
       "showTitle": true,
       "title": "$node",
@@ -1839,6 +1840,6 @@
     ]
   },
   "timezone": "browser",
-  "title": "OpenShift - Cluster",
+  "title": "OpenShift - Origin Cluster",
   "version": 8
 }
