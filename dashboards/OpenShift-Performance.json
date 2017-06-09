@@ -2,7 +2,7 @@
   "id": null,
   "title": "OpenShift - Performance",
   "originalTitle": "OpenShift - Performance",
-  "tags": [],
+  "tags": [openshift],
   "style": "dark",
   "timezone": "browser",
   "editable": true,

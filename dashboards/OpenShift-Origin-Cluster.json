@@ -1787,7 +1787,9 @@
   ],
   "schemaVersion": 14,
   "style": "dark",
-  "tags": [],
+  "tags": [
+	    "origin"
+	    ],  
   "templating": {
     "list": [
       {
