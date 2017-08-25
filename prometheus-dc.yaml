@@ -74,6 +74,7 @@ spec:
               name: config-volume
             - mountPath: /prometheus
               name: data-volume
+              subPath: prometheus-db
         - args:
             - '-volume-dir'
             - /etc/prometheus/config
