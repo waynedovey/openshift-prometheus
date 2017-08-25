@@ -89,8 +89,9 @@ spec:
         - configMap:
             name: prometheus
           name: config-volume
-        - emptyDir: {}
-          name: data-volume
+        - name: data-volume
+          PersistentVolumeClaim:
+            claimName: prometheus-claim
   triggers:
     - type: ConfigChange
 endGroup: false

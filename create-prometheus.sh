@@ -5,6 +5,7 @@ oc adm new-project prometheus
 oc project prometheus 
 sleep 5
 
+oc create -f prometheus-pvc.yaml
 oc create -f prometheus-dc.yaml
 oc adm policy add-cluster-role-to-user cluster-reader system:serviceaccount:prometheus:default
 oc adm policy add-cluster-role-to-user cluster-reader system:serviceaccount:prometheus:metrics
@@ -17,5 +18,3 @@ oc adm pod-network make-projects-global nft
 oc adm pod-network make-projects-global wow
 oc adm pod-network make-projects-global prometheus
 oc adm pod-network make-projects-global openshift-infra
-
-bash prometheus-pvc-pv.sh
