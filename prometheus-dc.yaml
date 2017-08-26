@@ -91,7 +91,7 @@ spec:
             name: prometheus
           name: config-volume
         - name: data-volume
-          PersistentVolumeClaim:
+          persistentVolumeClaim:
             claimName: prometheus-claim
   triggers:
     - type: ConfigChange
