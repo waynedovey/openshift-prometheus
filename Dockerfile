@@ -29,7 +29,7 @@ ADD dashboards /dashboards
 RUN mkdir /conf
 RUN chmod 777 /dashboards && chmod 666 /dashboards/* && chmod 777 /conf
 
-ADD plugins/savantly-heatmap-panel /usr/share/grafana/public/app/plugins/panel/savantly-heatmap-panel
-RUN chmod -R 777 /usr/share/grafana/public/app/plugins/panel/savantly-heatmap-panel
+#ADD plugins/savantly-heatmap-panel /usr/share/grafana/public/app/plugins/panel/savantly-heatmap-panel
+#RUN chmod -R 777 /usr/share/grafana/public/app/plugins/panel/savantly-heatmap-panel
 
 USER grafana
