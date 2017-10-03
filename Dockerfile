@@ -13,8 +13,8 @@ RUN chmod 777 /var/lib/grafana /usr/share/grafana/
 RUN chown grafana /var/lib/grafana
 RUN chown grafana /usr/share/grafana/
 
-ADD debian-packages /debian-packages
-RUN dpkg -i /debian-packages/*.deb
+# We are using curl for checks
+RUN apt-get update && apt-get -y install curl && rm -rf /var/cache/apt/*
 
 ADD run.sh /run.sh
 RUN chown grafana /run.sh
