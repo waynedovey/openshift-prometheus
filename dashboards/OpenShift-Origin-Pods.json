@@ -1,8 +1,8 @@
 {
   "id": null,
-  "title": "OpenShift - Pods",
-  "originalTitle": "OpenShift - Pods",
-  "tags": ["openshift"],
+  "title": "OpenShift Origin - Pods",
+  "originalTitle": "OpenShift Origin - Pods",
+  "tags": ["origin"],
   "style": "dark",
   "timezone": "browser",
   "editable": true,
